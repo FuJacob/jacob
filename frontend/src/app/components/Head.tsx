@@ -16,7 +16,7 @@ const Head = () => {
           <h2 className="font-bold mb-4">
             &mdash; always confused, always learning
           </h2>
-          <div className="bg-dark p-3 rounded-lg ">
+          <div className="bg-dark p-3 rounded-lg shadow-2xl">
             <h2 className="">
               ↪ incoming SWE intern @ HubSpot this summer 2025
             </h2>{" "}
