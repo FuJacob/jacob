@@ -34,6 +34,7 @@ const Chatbox = () => {
         {/* ===== INTRODUCTION SECTION ===== */}
 
         <div className="flex flex-col gap-3">
+        <div className="py-3"/>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
