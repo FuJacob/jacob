@@ -90,7 +90,7 @@ const Chatbox = () => {
                       //   ` ↪ in grade 5, i played with Scratch at my local library's coding classes`
                       // )
                       .typeString(
-                        `↪ in grade 8 summer i made a popular .io game on modd.io`
+                        `↪ in grade 8 i made a popular .io game on modd.io`
                       )
                       // .typeString(
                       //   `<br>↪ in grade 11 & 12 summers i took online CS and learnt processing and java`
