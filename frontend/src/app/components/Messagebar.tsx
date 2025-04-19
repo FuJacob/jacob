@@ -7,8 +7,7 @@ import {
   FaGithubAlt,
   FaLinkedinIn,
   FaEnvelopeOpen,
-  FaArrowCircleUp,
-  FaArrowUp,
+  FaArrowAltCircleRight,
 } from "react-icons/fa";
 
 import { useState } from "react";
@@ -39,57 +38,58 @@ const Messagebar = () => {
     setCurrMsg("");
   };
   return (
-    <div className=" w-full">
+    <div className="flex w-full gap-4 mb-4">
       <form
-        className="flex justify-between items-center bg-accent rounded-lg p-2 w-full h-12"
+        className="flex justify-between items-center bg-accent rounded-lg p-1 w-4/5 h-12"
         onSubmit={handleSubmit}
-      >
-        <div className="flex items-center px-3 w-full rounded-lg">
+          >
+        <div className="flex items-center w-full rounded-lg">
           <input
             value={currMsg}
-            className="focus:outline-none w-full mb-1"
+            className="px-4 focus:outline-none w-full mb-1"
             type="text"
             placeholder="send me a message..."
             onChange={(e) => setCurrMsg(e.target.value)}
           />
-          {/* <button className="flex justify-center items-center bg-hubspot w-8 h-8 rounded-lg">
-            <FaArrowUp className="text-sm" />
-          </button> */}
-        </div>
-        <div className="flex justify-center items-center w-1/3 gap-2">
-          <a
-            className="flex justify-center items-center bg-dark font-bold w-8 h-8 font-sans rounded-full"
-            href="https://www.linkedin.com/in/fujacob/"
-            target="_blank"
-          >
-            <FaLinkedinIn className="text-lg" />
-          </a>
+          <button className="flex justify-center items-center w-12 h-12">
+            <FaArrowAltCircleRight className="text-2xl" />
+          </button>
 
-          <a
-            className="flex justify-center items-center font-bold bg-dark w-8 h-8 font-sans rounded-full"
-            href="https://www.linkedin.com/in/fujacob/"
-            target="_blank"
-          >
-            <FaGithub className="text-lg" />
-          </a>
-
-          <a
-            className="flex justify-center items-center font-bold bg-dark w-8 h-8 font-sans rounded-full"
-            href="https://www.linkedin.com/in/fujacob/"
-            target="_blank"
-          >
-            <FaTwitter className="text-lg" />
-          </a>
-
-          <a
-            className="flex justify-center items-center font-bold bg-dark w-8 h-8 font-sans rounded-full"
-            href="https://www.linkedin.com/in/fujacob/"
-            target="_blank"
-          >
-            <FaEnvelope className="text-lg" />
-          </a>
         </div>
       </form>
+      <div className="flex justify-center items-center w-1/3 gap-2 bg-accent rounded-lg w-2/5 h-12">
+        <a
+          className="flex justify-center items-center bg-dark font-bold w-8 h-8 font-sans rounded-full hover:bg-hubspot hover:scale-110 hover:duration-300"
+          href="https://www.linkedin.com/in/fujacob/"
+          target="_blank"
+        >
+          <FaLinkedinIn className="text-lg" />
+        </a>
+
+        <a
+          className="flex justify-center items-center font-bold bg-dark w-8 h-8 font-sans rounded-full hover:bg-hubspot hover:scale-110 hover:duration-300"
+          href="https://www.linkedin.com/in/fujacob/"
+          target="_blank"
+        >
+          <FaGithub className="text-lg" />
+        </a>
+
+        <a
+          className="flex justify-center items-center font-bold bg-dark w-8 h-8 font-sans rounded-full hover:bg-hubspot hover:scale-110 hover:duration-300"
+          href="https://www.linkedin.com/in/fujacob/"
+          target="_blank"
+        >
+          <FaTwitter className="text-lg" />
+        </a>
+
+        <a
+          className="flex justify-center items-center font-bold bg-dark w-8 h-8 font-sans rounded-full hover:bg-hubspot hover:scale-110 hover:duration-300"
+          href="https://www.linkedin.com/in/fujacob/"
+          target="_blank"
+        >
+          <FaEnvelope className="text-lg" />
+        </a>
+      </div>
     </div>
   );
 };

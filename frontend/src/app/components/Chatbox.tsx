@@ -24,7 +24,7 @@ const Chatbox = () => {
   }, [messages]);
 
   return (
-    <div className="flex flex-col justify-left items-start w-full h-3/5 gap-12 mb-12">
+    <div className="flex flex-col justify-left items-start w-full h-2/5 gap-12 mb-12 text-2xl font-sans">
       <div className="overflow-y-auto space-y-8">
         {/* ===== INTRODUCTION SECTION ===== */}
         <div className="flex flex-col gap-3">
@@ -42,7 +42,7 @@ const Chatbox = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(
-                      `hi i'm jacob fu — a cs and finance student at the university of waterloo. i'm interested in building things that make life easier for businesses and/or people.`
+                      `hi i'm jacob fu. i study cs & finance at waterloo. i like to build things sometimes. i been coding since september of my first year`
                     )
                     .start()
                     .callFunction(() => {
@@ -89,7 +89,7 @@ const Chatbox = () => {
                     cursor: "",
                   }}
                 /> */}
-                <div className="flex flex-wrap gap-3 font-sans font-black text-sm">
+                <div className="flex flex-wrap gap-3 font-sans font-black text-lg">
                   <div className="group bg-[#2AB24C] text-center px-2 py-1 rounded-lg">
                     <span className="group-hover:hidden">Weehooey</span>
                     <span className="hidden group-hover:block italic font-bold">
@@ -166,7 +166,7 @@ const Chatbox = () => {
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        `hi i'm jacob fu — a cs and finance student at the university of waterloo. i'm interested in building things that make life easier for businesses and people.`
+                        "made a couple of hackathon winning projects like rbveal. also worked on x. check out my github for more."
                       )
                       .start()
                       .callFunction(() => {
@@ -202,7 +202,7 @@ const Chatbox = () => {
                     typewriter
 
                       .typeString(
-                        "outside of studying and working i really like playing volleyball, badminton, and some ping-pong here and there (yeah ik im so unique). i also like losing lots of money trading tech stocks and going to hackathons!"
+                        "i love playing volleyball, badminton, and ping-pong (im so unique). also love losing money in stock market too."
                       )
                       .start()
                       .callFunction(() => {
@@ -266,6 +266,41 @@ const Chatbox = () => {
             )}
           </div>
         )}
+
+        {/* ===== PERSONAL INTERESTS SECTION ===== */}
+        {currSection >= 5 && (
+          <div className="flex flex-col gap-3">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              onAnimationComplete={() => setShowResponse(showResponse + 1)}
+            >
+              <Question question="i wanna talk to you to rn though" />
+            </motion.div>
+          </div>
+        )}
+
+        {showResponse >= 6 && (
+          <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+
+                  .typeString("sure. just send me a message below then 👇🏼")
+                  .start()
+                  .callFunction(() => {
+                    setCurrSection(currSection + 1);
+                  });
+              }}
+              options={{
+                delay: 10,
+                cursor: "",
+              }}
+            />
+          </div>
+        )}
+
         {messages &&
           messages.map(
             (
