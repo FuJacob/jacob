@@ -5,6 +5,7 @@ import Typewriter from "typewriter-effect";
 import { useState, useContext, useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import Message from "./Message";
+import QandA from "./QandA";
 /**
  * Chatbox component that displays a conversation interface
  * with questions and answers in a scrollable container
@@ -19,20 +20,27 @@ const Chatbox = () => {
 
   const bottomRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
+  const scrollToBottom = () => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
   }, [messages]);
 
   return (
     <div className="flex flex-col justify-left items-start w-full h-2/5 gap-12 mb-12 text-2xl font-sans">
       <div className="overflow-y-auto space-y-8">
         {/* ===== INTRODUCTION SECTION ===== */}
+
         <div className="flex flex-col gap-3">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            onAnimationComplete={() => setShowResponse(showResponse + 1)}
+            onAnimationComplete={() => {
+              setShowResponse(showResponse + 1);
+            }}
           >
             <Question question="tell me about yourself" />
           </motion.div>{" "}
@@ -42,15 +50,16 @@ const Chatbox = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(
-                      `hi i'm jacob fu. i study cs & finance at waterloo. i like to build things sometimes. i been coding since september of my first year`
+                      `hi i'm jacob fu. i study cs & finance at waterloo. i like to build things sometimes.`
                     )
                     .start()
                     .callFunction(() => {
+                      scrollToBottom();
                       setCurrSection(currSection + 1);
                     });
                 }}
                 options={{
-                  delay: 10,
+                  delay: 2,
                   cursor: "",
                 }}
               />
@@ -58,19 +67,71 @@ const Chatbox = () => {
           )}
         </div>
 
-        {/* ===== WORK EXPERIENCE SECTION ===== */}
+        {/* ===== PROJECTS SECTION ===== */}
         {currSection >= 1 && (
           <div className="flex flex-col gap-3">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              onAnimationComplete={() => setShowResponse(showResponse + 1)}
+              onAnimationComplete={() => {
+                setShowResponse(showResponse + 1);
+              }}
+            >
+              <Question question="how did you get into software development?" />
+            </motion.div>
+
+            {showResponse >= 2 && (
+              <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      // .typeString(
+                      //   ` ↪ in grade 5, i played with Scratch at my local library's coding classes`
+                      // )
+                      .typeString(
+                        `↪ in grade 8 summer i made a popular .io game on modd.io`
+                      )
+                      // .typeString(
+                      //   `<br>↪ in grade 11 & 12 summers i took online CS and learnt processing and java`
+                      // )
+                      .typeString(`<br>↪ in grade 12 i did 2 internships`)
+                      .typeString(
+                        `<br>↪ in 1a term of waterloo i learnt python in CFM101`
+                      )
+                      .typeString(`<br>↪ then i went to 5 hackathons`)
+                      .typeString(`<br>↪ now i am here`)
+                      .start()
+                      .callFunction(() => {
+                        scrollToBottom();
+                        setCurrSection(currSection + 1);
+                      });
+                  }}
+                  options={{
+                    delay: 2,
+                    cursor: "",
+                  }}
+                />
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* ===== WORK EXPERIENCE SECTION ===== */}
+        {currSection >= 2 && (
+          <div className="flex flex-col gap-3">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              onAnimationComplete={() => {
+                setShowResponse(showResponse + 1);
+              }}
             >
               <Question question="where have you worked before?" />
             </motion.div>
 
-            {showResponse >= 2 && (
+            {showResponse >= 3 && (
               <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
                 {/* <Typewriter
                   onInit={(typewriter) => {
@@ -80,13 +141,16 @@ const Chatbox = () => {
                       )
                       .start()
                       .callFunction(() => {
-                        setShowResponse(showResponse + 1);
+                      scrollToBottom()
+                                                scrollToBottom();
+setShowResponse(showResponse + 1);
                         setCurrSection(currSection + 1);
                       });
                   }}
                   options={{
-                    delay: 10,
+                    delay: 2,
                     cursor: "",
+                    
                   }}
                 /> */}
                 <div className="flex flex-wrap gap-3 font-sans font-black text-lg">
@@ -99,7 +163,7 @@ const Chatbox = () => {
 
                   <div className="group w-fit bg-[#7d393a] text-center px-2 py-1 rounded-lg">
                     <span className="group-hover:hidden">
-                      1000 Islands Gan. Chamber
+                      200 Islands Gan. Chamber
                     </span>
                     <span className="hidden group-hover:block italic font-bold">
                       Web and Graphic Designer Intern
@@ -134,12 +198,14 @@ const Chatbox = () => {
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter.start().callFunction(() => {
+                      scrollToBottom();
+                      scrollToBottom();
                       setShowResponse(showResponse + 1);
                       setCurrSection(currSection + 1);
                     });
                   }}
                   options={{
-                    delay: 10,
+                    delay: 2,
                     cursor: "",
                   }}
                 />
@@ -149,32 +215,33 @@ const Chatbox = () => {
         )}
 
         {/* ===== PROJECTS SECTION ===== */}
-        {currSection >= 2 && (
+        {currSection >= 3 && (
           <div className="flex flex-col gap-3">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              onAnimationComplete={() => setShowResponse(showResponse + 1)}
+              onAnimationComplete={() => {
+                setShowResponse(showResponse + 1);
+              }}
             >
               <Question question="what kind of projects have you worked on?" />
             </motion.div>
 
-            {showResponse >= 3 && (
+            {showResponse >= 4 && (
               <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
-                      .typeString(
-                        "made a couple of hackathon winning projects like rbveal. also worked on x. check out my github for more."
-                      )
+                      .typeString("check out my github.")
                       .start()
                       .callFunction(() => {
+                        scrollToBottom();
                         setCurrSection(currSection + 1);
                       });
                   }}
                   options={{
-                    delay: 10,
+                    delay: 2,
                     cursor: "",
                   }}
                 />
@@ -184,33 +251,36 @@ const Chatbox = () => {
         )}
 
         {/* ===== PERSONAL INTERESTS SECTION ===== */}
-        {currSection >= 3 && (
+        {currSection >= 4 && (
           <div className="flex flex-col gap-3">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              onAnimationComplete={() => setShowResponse(showResponse + 1)}
+              onAnimationComplete={() => {
+                setShowResponse(showResponse + 1);
+              }}
             >
               <Question question="what do you do outside of studying/working?" />
             </motion.div>
 
-            {showResponse >= 4 && (
+            {showResponse >= 5 && (
               <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
 
                       .typeString(
-                        "i love playing volleyball, badminton, and ping-pong (im so unique). also love losing money in stock market too."
+                        "i love playing volleyball, badminton, and ping-pong (im so unique)."
                       )
                       .start()
                       .callFunction(() => {
+                        scrollToBottom();
                         setCurrSection(currSection + 1);
                       });
                   }}
                   options={{
-                    delay: 10,
+                    delay: 2,
                     cursor: "",
                   }}
                 />
@@ -220,45 +290,48 @@ const Chatbox = () => {
         )}
 
         {/* ===== CONTACT INFORMATION SECTION ===== */}
-        {currSection >= 4 && (
+        {currSection >= 5 && (
           <div className="flex flex-col gap-3">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              onAnimationComplete={() => setShowResponse(showResponse + 1)}
+              onAnimationComplete={() => {
+                scrollToBottom();
+                setShowResponse(showResponse + 1);
+              }}
             >
               <Question question="how can i contact you?" />
             </motion.div>
 
-            {showResponse >= 5 && (
+            {showResponse >= 7 && (
               <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
                       .typeString("you can reach me at ")
-                      .pauseFor(100)
+                      .pauseFor(20)
                       .typeString(
                         '<a href="mailto:jjacobfu@gmail.com" class="italic bg-dark border-1 px-1 py-0.5 rounded-lg">jjacobfu@gmail.com</a>'
                       )
                       .typeString(", or find me on ")
-                      .pauseFor(100)
+                      .pauseFor(20)
                       .typeString(
                         '<a href="https://www.linkedin.com/in/fujacob/" class="italic bg-dark border-1 px-1 py-0.5 rounded-lg">linkedin</a>'
                       )
                       .typeString(" and ")
-                      .pauseFor(100)
+                      .pauseFor(20)
                       .typeString(
                         '<a href="https://github.com/fujacob" class="italic bg-dark border-1 px-1 py-0.5 rounded-lg">github</a>'
                       )
-                      .typeString(". always happy to chat or collaborate!")
                       .start()
                       .callFunction(() => {
+                        scrollToBottom();
                         setCurrSection(currSection + 1);
                       });
                   }}
                   options={{
-                    delay: 10,
+                    delay: 2,
                     cursor: "",
                   }}
                 />
@@ -268,20 +341,22 @@ const Chatbox = () => {
         )}
 
         {/* ===== PERSONAL INTERESTS SECTION ===== */}
-        {currSection >= 5 && (
+        {currSection >= 6 && (
           <div className="flex flex-col gap-3">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              onAnimationComplete={() => setShowResponse(showResponse + 1)}
+              onAnimationComplete={() => {
+                setShowResponse(showResponse + 1);
+              }}
             >
               <Question question="i wanna talk to you to rn though" />
             </motion.div>
           </div>
         )}
 
-        {showResponse >= 6 && (
+        {showResponse >= 8 && (
           <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
             <Typewriter
               onInit={(typewriter) => {
@@ -290,11 +365,12 @@ const Chatbox = () => {
                   .typeString("sure. just send me a message below then 👇🏼")
                   .start()
                   .callFunction(() => {
+                    scrollToBottom();
                     setCurrSection(currSection + 1);
                   });
               }}
               options={{
-                delay: 10,
+                delay: 2,
                 cursor: "",
               }}
             />
@@ -306,7 +382,17 @@ const Chatbox = () => {
             (
               { question, answer }: { question: string; answer: string },
               index: number
-            ) => <Message question={question} msg={answer} key={index} />
+            ) => {
+              scrollToBottom();
+              return (
+                <Message
+                  question={question}
+                  msg={answer}
+                  key={index}
+                  scrollToBottom={scrollToBottom}
+                />
+              );
+            }
           )}
         <div ref={bottomRef} />
       </div>

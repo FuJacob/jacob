@@ -2,22 +2,23 @@ import React from "react";
 
 const Head = () => {
   return (
-    <div className="text-lg flex flex-col justify-end mb-6 h-2/5">
+    <div className="text-lg flex flex-col justify-end mb-6 h-2/5 w-full">
       <div className="flex justify-between items-center gap-4">
-        <div className="flex justify-center items-center w-1/3">
-          <div className="relative z-50 left-38 top-14 w-10 h-10 bg-green-600 rounded-full border-4" />
+        <div className="relative flex justify-center items-center w-1/3">
+          <div className="absolute z-50 left-36 top-28 w-10 h-10 bg-green-600 rounded-full border-4" />
           <img
             src="avatar4.jpg"
             alt="profile picture of jacob"
-            className="w-42 h-42 rounded-full border-4 shadow-2xl object-cover"
+            className="w-40 h-40 rounded-full border-4 shadow-2xl object-cover"
           />
         </div>
-        <div className="flex flex-col w-2/3">
+        <div className="flex-1 flex-col ">
           <h1 className="text-5xl font-semibold mb-2">
             hello, i'm <span className="font-black">jacob fu</span>.
           </h1>
           <h2 className="font-bold mb-4">
-            &mdash; always confused, always learning
+            {/* &mdash; always confused, always learning */}
+            &mdash; nice to meet you, stranger
           </h2>
           <div className="bg-dark p-3 rounded-lg shadow-2xl">
             <h2 className="flex items-center gap-1">
@@ -27,11 +28,17 @@ const Head = () => {
                 className="w-4 h-4 rounded-lg"
                 alt="hubspot"
               />
-              <span className="text-hubspot font-bold">HubSpot</span> this
-              summer 2025
+              <span className="text-hubspot font-bold">hubspot</span> this
+              summer '25
             </h2>{" "}
-            <h2 className="">
-              ↪ cs & finance @ University of Waterloo, graduating '2029
+            <h2 className="flex items-center gap-1">
+              ↪ cs & finance student @
+              <img
+                src="waterloo.png"
+                className="w-4 h-4 rounded-lg"
+                alt="uwaterloo"
+              />
+              <span className="text-yellow-400 font-bold">uwaterloo</span>, class of '29
             </h2>{" "}
           </div>
         </div>

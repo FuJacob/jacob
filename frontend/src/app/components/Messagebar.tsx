@@ -13,6 +13,7 @@ import {
 import { useState } from "react";
 import { useMessage } from "../MessageContext";
 const Messagebar = () => {
+  // const [answer, setAnswer] = useState("");
   const [currMsg, setCurrMsg] = useState("");
   const { messages, setMessages } = useMessage();
 
@@ -23,15 +24,19 @@ const Messagebar = () => {
       body: JSON.stringify({ question: currMsg }),
     });
     const data = await response.json();
+
     console.log(data);
+    // setAnswer(data.answer);
     return data.answer;
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (currMsg.trim()) {
-      const answer = getResponse();
+      const answer = await getResponse();
+      console.log("wtf");
+
       setMessages([...messages, { question: currMsg, answer: answer }]);
       console.log(answer);
     }
@@ -42,19 +47,21 @@ const Messagebar = () => {
       <form
         className="flex justify-between items-center bg-accent rounded-lg p-1 w-4/5 h-12"
         onSubmit={handleSubmit}
-          >
+      >
         <div className="flex items-center w-full rounded-lg">
           <input
             value={currMsg}
             className="px-4 focus:outline-none w-full mb-1"
             type="text"
-            placeholder="send me a message..."
+            placeholder="ask me anything :)"
             onChange={(e) => setCurrMsg(e.target.value)}
           />
-          <button className="flex justify-center items-center w-12 h-12">
+          <button
+            type="submit"
+            className="flex justify-center items-center w-12 h-12 hover:text-hubspot hover:duration-300 hover:scale-110"
+          >
             <FaArrowAltCircleRight className="text-2xl" />
           </button>
-
         </div>
       </form>
       <div className="flex justify-center items-center w-1/3 gap-2 bg-accent rounded-lg w-2/5 h-12">

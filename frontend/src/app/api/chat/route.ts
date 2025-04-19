@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 import { GoogleGenAI } from "@google/genai";
-
+import getSystemPrompt from "./prompt";
 const ai = new GoogleGenAI({
   apiKey: "AIzaSyBfInPr1PtZM2NeD_5RuvxlZ4xpL6DRlqY",
 });
 
 export async function POST(req: Request) {
+  const prompt = getSystemPrompt();
   try {
     const body = await req.json();
 
@@ -15,7 +16,7 @@ export async function POST(req: Request) {
       model: "gemini-2.0-flash",
       contents: [question],
       config: {
-        systemInstruction: "hasdasd asd asd as d",
+        systemInstruction: prompt,
       },
     });
 
