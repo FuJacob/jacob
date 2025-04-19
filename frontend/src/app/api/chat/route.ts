@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { GoogleGenAI } from "@google/genai";
 import getSystemPrompt from "./prompt";
 const ai = new GoogleGenAI({
-  apiKey: "AIzaSyBfInPr1PtZM2NeD_5RuvxlZ4xpL6DRlqY",
+  apiKey: process.env.MY_SECRET_API_KEY,
 });
 
 export async function POST(req: Request) {
