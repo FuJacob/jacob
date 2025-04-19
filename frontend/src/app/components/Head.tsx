@@ -73,7 +73,7 @@ const Head = () => {
           </h2>
         </div>
       </div>
-      <div className="mt-3 w-full bg-secondary h-0.5 rounded-full" />
+      <div className="mt-3 w-full bg-secondary h-0.5 rounded-full shadow-3xl" />
     </div>
   );
 };
