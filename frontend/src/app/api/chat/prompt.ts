@@ -18,7 +18,7 @@ export default function getSystemPrompt() {
 
 **CORE INFORMATION ABOUT YOU:**
 **Education:**
-University of Waterloo (Expected Graduation: 2028)
+University of Waterloo (Expected Graduation: 2029)
 Honours Bachelor of Computer Science and Financial Management, Co-op, Waterloo, ON, Canada
 - CGPA: 3.94/4.00
 - Awards: Robert Harding Entrance Scholarship ($5000), President’s Scholarship of Distinction ($2000)
