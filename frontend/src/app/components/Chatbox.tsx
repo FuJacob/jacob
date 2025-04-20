@@ -15,7 +15,7 @@ import { useMessage } from "../MessageContext";
 const Chatbox = () => {
   const { messages } = useMessage();
 
-  const [currSection, setCurrSection] = useState(0);
+  const [currSection, setCurrSection] = useState(-1);
   const [showResponse, setShowResponse] = useState(0);
 
   const bottomRef = useRef<HTMLDivElement | null>(null);
@@ -26,47 +26,54 @@ const Chatbox = () => {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  });
+
+  useEffect(() => {
+    const waitBeforeChat = setTimeout(() => setCurrSection(0), 2500);
+    return () => clearTimeout(waitBeforeChat);
+  }, []);
 
   return (
-    <div className="flex flex-col justify-left items-start w-full h-4/7 sm:h-2/5 gap-12 mb-12 text-2xl font-sans">
+    <div className="flex flex-col justify-left items-start w-full h-4/7 sm:h-3/5 gap-12 text-2xl">
       <div className="overflow-y-auto space-y-8">
         {/* ===== INTRODUCTION SECTION ===== */}
 
-        <div className="flex flex-col gap-3">
-        <div className="py-3"/>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            onAnimationComplete={() => {
-              setShowResponse(showResponse + 1);
-            }}
-          >
-            <Question question="tell me about yourself" />
-          </motion.div>{" "}
-          {showResponse >= 1 && (
-            <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString(
-                      `hi i'm jacob fu. i study cs & finance at waterloo. i like to build things sometimes.`
-                    )
-                    .start()
-                    .callFunction(() => {
-                      scrollToBottom();
-                      setCurrSection(currSection + 1);
-                    });
-                }}
-                options={{
-                  delay: 2,
-                  cursor: "",
-                }}
-              />
-            </div>
-          )}
-        </div>
+        {currSection >= 0 && (
+          <div className="flex flex-col gap-3">
+            <div className="py-3" />
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              onAnimationComplete={() => {
+                setShowResponse(showResponse + 1);
+              }}
+            >
+              <Question question="tell me about yourself" />
+            </motion.div>{" "}
+            {showResponse >= 1 && (
+              <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString(
+                        `hi i'm jacob fu. i study cs & finance at waterloo. i like to build things sometimes.`
+                      )
+                      .start()
+                      .callFunction(() => {
+                        scrollToBottom();
+                        setCurrSection(currSection + 1);
+                      });
+                  }}
+                  options={{
+                    delay: 2,
+                    cursor: "",
+                  }}
+                />
+              </div>
+            )}
+          </div>
+        )}
 
         {/* ===== PROJECTS SECTION ===== */}
         {currSection >= 1 && (
@@ -87,15 +94,9 @@ const Chatbox = () => {
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
-                      // .typeString(
-                      //   ` ↪ in grade 5, i played with Scratch at my local library's coding classes`
-                      // )
                       .typeString(
                         `↪ in grade 8 i made a popular .io game on modd.io`
                       )
-                      // .typeString(
-                      //   `<br>↪ in grade 11 & 12 summers i took online CS and learnt processing and java`
-                      // )
                       .typeString(`<br>↪ in grade 12 i did 2 internships`)
                       .typeString(
                         `<br>↪ in 1a term of waterloo i learnt python in CFM101`
@@ -134,27 +135,36 @@ const Chatbox = () => {
 
             {showResponse >= 3 && (
               <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
-                {/* <Typewriter
+                <Typewriter
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        "Hello! Not too much on my end - just here and ready to chat or help with whatever you need today. How are you doing? Is there something specific I can assist you with?"
+                        `<span class="inline-block bg-[#2AB24C] text-center px-2 py-1 rounded-lg font-sans text-lg font-bold">Weehooey</span> – IT Intern`
+                      )
+                      .typeString(
+                        `<br><br><span class="inline-block bg-[#7d393a] text-center px-2 py-1 rounded-lg font-sans text-lg  font-bold">1000 Islands Gan. Chamber</span> – Web/Graphic Intern`
+                      )
+                      .typeString(
+                        `<br><br><span class="inline-block bg-[#FF2381] text-center px-2 py-1 rounded-lg font-sans  text-lg font-bold">PetMap</span> – Software Engineer`
+                      )
+                      .typeString(
+                        `<br><br><span class="inline-block bg-[#2B5D81] text-center px-2 py-1 rounded-lg font-sans text-lg  font-bold">3Tenets Consulting</span> – Full Stack Developer`
+                      )
+                      .typeString(
+                        `<br><br><span class="inline-block bg-[#3A36BD] text-center px-2 py-1 rounded-lg font-sans text-lg  font-bold">Bridgewell Financial</span> – Software Engineering Intern`
                       )
                       .start()
                       .callFunction(() => {
-                      scrollToBottom()
-                                                scrollToBottom();
-setShowResponse(showResponse + 1);
+                        scrollToBottom();
                         setCurrSection(currSection + 1);
                       });
                   }}
                   options={{
                     delay: 2,
                     cursor: "",
-                    
                   }}
-                /> */}
-                <div className="flex flex-wrap gap-3 font-sans font-black text-lg">
+                />
+                {/* <div className="flex flex-wrap gap-3 font-sans font-black text-lg">
                   <div className="group bg-[#2AB24C] text-center px-2 py-1 rounded-lg">
                     <span className="group-hover:hidden">Weehooey</span>
                     <span className="hidden group-hover:block italic font-bold">
@@ -195,21 +205,7 @@ setShowResponse(showResponse + 1);
                       Software Engineering Intern
                     </span>
                   </div>
-                </div>
-                <Typewriter
-                  onInit={(typewriter) => {
-                    typewriter.start().callFunction(() => {
-                      scrollToBottom();
-                      scrollToBottom();
-                      setShowResponse(showResponse + 1);
-                      setCurrSection(currSection + 1);
-                    });
-                  }}
-                  options={{
-                    delay: 2,
-                    cursor: "",
-                  }}
-                />
+                </div> */}
               </div>
             )}
           </div>
@@ -234,7 +230,9 @@ setShowResponse(showResponse + 1);
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
-                      .typeString("check out my github.")
+                      .typeString(
+                        'check out my <a href="https://github.com/fujacob" class="italic bg-dark border-1 px-1 py-0.5 rounded-lg">github</a>.'
+                      )
                       .start()
                       .callFunction(() => {
                         scrollToBottom();
@@ -305,25 +303,13 @@ setShowResponse(showResponse + 1);
               <Question question="how can i contact you?" />
             </motion.div>
 
-            {showResponse >= 7 && (
+            {showResponse >= 6 && (
               <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
-                      .typeString("you can reach me at ")
-                      .pauseFor(20)
                       .typeString(
-                        '<a href="mailto:jjacobfu@gmail.com" class="italic bg-dark border-1 px-1 py-0.5 rounded-lg">jjacobfu@gmail.com</a>'
-                      )
-                      .typeString(", or find me on ")
-                      .pauseFor(20)
-                      .typeString(
-                        '<a href="https://www.linkedin.com/in/fujacob/" class="italic bg-dark border-1 px-1 py-0.5 rounded-lg">linkedin</a>'
-                      )
-                      .typeString(" and ")
-                      .pauseFor(20)
-                      .typeString(
-                        '<a href="https://github.com/fujacob" class="italic bg-dark border-1 px-1 py-0.5 rounded-lg">github</a>'
+                        'you can reach me at <a href="mailto:jjacobfu@gmail.com" class="italic bg-dark border-1 px-1 py-0.5 rounded-lg">jjacobfu@gmail.com</a>, or connect/send me a message on <a href="https://www.linkedin.com/in/fujacob/" class="italic bg-dark border-1 px-1 py-0.5 rounded-lg">linkedin</a>.'
                       )
                       .start()
                       .callFunction(() => {
@@ -352,18 +338,18 @@ setShowResponse(showResponse + 1);
                 setShowResponse(showResponse + 1);
               }}
             >
-              <Question question="i wanna talk to you to rn though" />
+              <Question question="i wanna ask you some more questions right now though" />
             </motion.div>
           </div>
         )}
 
-        {showResponse >= 8 && (
+        {showResponse >= 7 && (
           <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
 
-                  .typeString("sure. just send me a message below then 👇🏼")
+                  .typeString("sure. ask me anything below then 👇")
                   .start()
                   .callFunction(() => {
                     scrollToBottom();

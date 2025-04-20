@@ -1,26 +1,79 @@
+"use client";
 import React from "react";
-
+import Time from "./Time";
+import { motion } from "motion/react";
 const Head = () => {
   return (
     <div className="text-lg flex flex-col w-full">
       <div className="flex justify-between items-center gap-4">
         <div className="relative flex justify-center items-center w-1/3">
-          <div className="absolute z-50 left-21 top-16 w-6 h-6 sm:left-36 sm:top-28 sm:w-10 sm:h-10 bg-green-600 rounded-full border-4" />
-          <img
-            src="avatar4.jpg"
-            alt="profile picture of jacob"
-            className="w-24 h-24 sm:w-40 sm:h-40 rounded-full border-4 shadow-2xl object-cover"
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5, delay: 2, ease: "easeInOut" }}
+            className="absolute z-50 left-21 top-16 w-6 h-6 sm:left-36 sm:top-28 sm:w-10 sm:h-10 bg-green-600 rounded-full border-4"
           />
+          <motion.div
+            initial={{ y: -2000, scale: 0 }}
+            animate={{ y: 0, scale: 1 }}
+            transition={{
+              type: "spring",
+              ease: "easeInOut",
+              duration: 1,
+              delay: 0.5,
+            }}
+          >
+            <img
+              src="avatar4.jpg"
+              alt="profile picture of jacob"
+              className="w-24 h-24 sm:w-40 sm:h-40 rounded-full border-4 shadow-2xl object-cover"
+            />
+          </motion.div>
         </div>
         <div className="flex-1 flex-col ">
-          <h1 className="text-5xl font-semibold mb-6">
-            hello, i'm <span className="font-black">jacob fu</span>.
-          </h1>
+          <div className="flex text-5xl font-semibold mb-6 gap-4">
+            <motion.div
+              initial={{ y: -500 }}
+              animate={{ y: 0 }}
+              transition={{
+                type: "spring",
+                ease: "easeInOut",
+                delay: 0,
+                duration: 1,
+              }}
+            >
+              hello, i'm{" "}
+            </motion.div>
+
+            <motion.div
+              initial={{ y: -500 }}
+              animate={{ y: 0 }}
+              transition={{
+                type: "spring",
+                ease: "easeInOut",
+                delay: 0.2,
+                duration: 1,
+              }}
+              className="font-black"
+            >
+              jacob fu.
+            </motion.div>
+          </div>
           {/* <h2 className="font-bold mb-4">
             &mdash; always confused, always learning
             &mdash; nice to meet you, stranger
           </h2> */}
-          <div className="hidden sm:block bg-dark p-3 rounded-lg shadow-2xl">
+          <motion.div
+            initial={{ x: 2000, scale: 0 }}
+            animate={{ x: 0, scale: 1 }}
+            transition={{
+              type: "spring",
+              ease: "easeInOut",
+              delay: 0.4,
+              duration: 1,
+            }}
+            className="hidden sm:block bg-dark p-3 rounded-lg shadow-2xl"
+          >
             <h2 className="flex items-center gap-1">
               ↪ incoming intern @{" "}
               <img
@@ -40,8 +93,8 @@ const Head = () => {
               />
               <span className="text-yellow-400 font-bold">uwaterloo</span>
               &mdash; class of '29
-            </h2>{" "}
-          </div>
+            </h2>
+          </motion.div>
         </div>
       </div>{" "}
       {/* mobile version */}
@@ -63,7 +116,19 @@ const Head = () => {
           class of '29
         </h2>{" "}
       </div>
-      <div className="flex flex-col">
+      <Time />
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{scale: 1 }}
+        transition={{
+          type: "spring",
+          ease: "easeInOut",
+          delay: 1.5,
+          duration: 1,
+        }}
+        className="mt-3 w-full bg-secondary h-0.5 rounded-full shadow-3xl"
+      />
+      {/* <div className="flex flex-col">
         <h1 className="text-5xl font-semibold mb-2"></h1>
         <div className="bg-dark p-3 rounded-lg shadow-2xl">
           <h2 className="">my favourite quote of all time: </h2>
@@ -73,7 +138,7 @@ const Head = () => {
           </h2>
         </div>
       </div>
-      <div className="mt-3 w-full bg-secondary h-0.5 rounded-full shadow-3xl" />
+      <div className="mt-3 w-full bg-secondary h-0.5 rounded-full shadow-3xl" /> */}
     </div>
   );
 };

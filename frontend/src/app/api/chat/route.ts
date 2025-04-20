@@ -1,5 +1,10 @@
 import { NextResponse } from "next/server";
-import { GoogleGenAI } from "@google/genai";
+import {
+  GoogleGenAI,
+  FunctionCallingConfig,
+  FunctionDeclaration,
+  Type,
+} from "@google/genai";
 import getSystemPrompt from "./prompt";
 const ai = new GoogleGenAI({
   apiKey: process.env.MY_SECRET_API_KEY,

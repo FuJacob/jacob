@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@google/genai": "^0.8.0",
-    "motion": "^12.6.3",
+    "motion": "^12.7.4",
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

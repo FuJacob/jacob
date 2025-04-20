@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "motion/react";
 import {
   FaGithub,
   FaLinkedin,
@@ -9,9 +10,11 @@ import {
   FaEnvelopeOpen,
   FaArrowAltCircleRight,
 } from "react-icons/fa";
+import Icon from "./Icon";
 
 import { useState } from "react";
 import { useMessage } from "../MessageContext";
+import { FaArrowRight } from "react-icons/fa6";
 const Messagebar = () => {
   // const [answer, setAnswer] = useState("");
   const [currMsg, setCurrMsg] = useState("");
@@ -43,60 +46,60 @@ const Messagebar = () => {
     setCurrMsg("");
   };
   return (
-    <div className="flex w-full gap-4 mb-4">
-      <form
-        className="flex justify-between items-center bg-accent rounded-lg p-1 w-4/5 h-12"
-        onSubmit={handleSubmit}
+    <div className="flex w-full gap-2 mb-4 text-2xl">
+      <motion.div
+        initial={{ y: 2000 }}
+        animate={{ y: 0 }}
+        transition={{
+          type: "spring",
+          ease: "easeInOut",
+          delay: 0.5,
+          duration: 1,
+        }}
+        className="flex justify-between items-center bg-accent rounded-lg p-1 w-4/5 h-16"
       >
-        <div className="flex items-center w-full rounded-lg">
-          <input
-            value={currMsg}
-            className="px-4 focus:outline-none w-full mb-1"
-            type="text"
-            placeholder="ask me anything :)"
-            onChange={(e) => setCurrMsg(e.target.value)}
-          />
-          <button
-            type="submit"
-            className="flex justify-center items-center w-12 h-12 hover:text-hubspot hover:duration-300 hover:scale-110"
-          >
-            <FaArrowAltCircleRight className="text-2xl" />
-          </button>
-        </div>
-      </form>
-      <div className="flex justify-center items-center w-1/3 gap-2 bg-accent rounded-lg w-2/5 h-12">
-        <a
-          className="flex justify-center items-center bg-dark font-bold w-8 h-8 font-sans rounded-full hover:bg-hubspot hover:scale-110 hover:duration-300"
-          href="https://www.linkedin.com/in/fujacob/"
-          target="_blank"
-        >
-          <FaLinkedinIn className="text-lg" />
-        </a>
-
-        <a
-          className="flex justify-center items-center font-bold bg-dark w-8 h-8 font-sans rounded-full hover:bg-hubspot hover:scale-110 hover:duration-300"
-          href="https://www.linkedin.com/in/fujacob/"
-          target="_blank"
-        >
-          <FaGithub className="text-lg" />
-        </a>
-
-        <a
-          className="flex justify-center items-center font-bold bg-dark w-8 h-8 font-sans rounded-full hover:bg-hubspot hover:scale-110 hover:duration-300"
-          href="https://www.linkedin.com/in/fujacob/"
-          target="_blank"
-        >
-          <FaTwitter className="text-lg" />
-        </a>
-
-        <a
-          className="flex justify-center items-center font-bold bg-dark w-8 h-8 font-sans rounded-full hover:bg-hubspot hover:scale-110 hover:duration-300"
-          href="https://www.linkedin.com/in/fujacob/"
-          target="_blank"
-        >
-          <FaEnvelope className="text-lg" />
-        </a>
-      </div>
+        <form className="w-full" onSubmit={handleSubmit}>
+          <div className="flex items-center w-full rounded-lg">
+            <input
+              value={currMsg}
+              className="px-4 focus:outline-none w-full mb-1"
+              type="text"
+              placeholder="ask me anything :)"
+              onChange={(e) => setCurrMsg(e.target.value)}
+            />
+            <button
+              type="submit"
+              className="flex justify-center items-center w-11 h-10 hover:text-hubspot hover:duration-300 hover:scale-110 bg-dark rounded-lg mr-1"
+            >
+              <FaArrowRight className="text-xl" />
+            </button>
+          </div>
+        </form>
+      </motion.div>
+      <motion.div
+        initial={{ y: 2000 }}
+        animate={{ y: 0 }}
+        transition={{
+          type: "spring",
+          ease: "easeInOut",
+          delay: 0.8,
+          duration: 1,
+        }}
+        className="flex flex-1 flex-row justify-center items-center gap-1 rounded-lg h-16 bg-accent p-2"
+      >
+        <Icon link="https://www.linkedin.com/in/fujacob/">
+          <FaLinkedinIn />
+        </Icon>
+        <Icon link="https://github.com/fujacob/">
+          <FaGithub />
+        </Icon>
+        <Icon link="https://www.linkedin.com/in/fujacob/">
+          <FaTwitter />
+        </Icon>{" "}
+        <Icon link="mailto:jjacobfu@gmail.com">
+          <FaEnvelope />
+        </Icon>
+      </motion.div>
     </div>
   );
 };
