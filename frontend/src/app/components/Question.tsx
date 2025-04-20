@@ -4,7 +4,7 @@ const Question = ({ question = "tell me about yourself" }) => {
   return (
     <motion.div
       whileHover={{ scale: 1.1, x: 30 }}
-      className="flex gap-2 justify-center items-center font-sans bg-dark text-base p-3 w-fit rounded-lg shadow-2xl"
+      className="flex gap-2 justify-center items-center font-sans bg-dark text-sm sm:text-base p-3 w-fit rounded-lg shadow-2xl"
     >
       <img
         src="ai.png"

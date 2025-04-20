@@ -48,7 +48,7 @@ const Messagebar = () => {
   return (
     <div className="flex w-full gap-2 mb-4 text-2xl">
       <motion.div
-        initial={{ y: 2000 }}
+        initial={{ y: 100 }}
         animate={{ y: 0 }}
         transition={{
           type: "spring",
@@ -77,7 +77,7 @@ const Messagebar = () => {
         </form>
       </motion.div>
       <motion.div
-        initial={{ y: 2000 }}
+        initial={{ y: 100 }}
         animate={{ y: 0 }}
         transition={{
           type: "spring",

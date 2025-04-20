@@ -32,7 +32,8 @@ const Time = () => {
         <div className="flex w-full sm:w-2/3 items-center gap-2">
           <img src="snoopy1.png" alt="snoopy" className="w-8 sm:w-24" />
           <h1 className="text-sm sm:text-lg font-semibold">
-            expect disappointment . . . <p>and you'll never be disappointed.</p>
+            prepare like it will all go wrong . . .
+            <p className="font-black text-base sm:text-2xl">show up like it won't.</p>
           </h1>
         </div>
         <div className="bg-white p-0.5 h-full rounded-full" />
