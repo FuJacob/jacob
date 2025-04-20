@@ -57,7 +57,7 @@ const Chatbox = () => {
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        `hi i'm jacob fu. i study cs & finance at waterloo. i like to build things sometimes.`
+                        `hi i'm jacob fu. i study cs & finance at waterloo. i like to build sometimes. i like playing volleyball and badminton with my friends.`
                       )
                       .start()
                       .callFunction(() => {
@@ -134,27 +134,26 @@ const Chatbox = () => {
             </motion.div>
 
             {showResponse >= 3 && (
-              <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
+              <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out text-xl border-1 p-4 ">
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        `<span class="inline-block bg-[#2AB24C] text-center px-2 py-1 rounded-lg font-sans text-lg font-bold">Weehooey</span> – IT Intern`
+                        `<span class="italic bg-dark border-1 px-2 text-center font-black py-0.5 rounded-lg">Weehooey</span> &nbsp; | &nbsp; IT Intern &nbsp; | &nbsp; <span class="p-1 bg-white rounded-md text-xs font-sans text-dark font-bold">Oct 2023 - Jan 2024</span>`
                       )
                       .typeString(
-                        `<br><br><span class="inline-block bg-[#7d393a] text-center px-2 py-1 rounded-lg font-sans text-lg  font-bold">1000 Islands Gan. Chamber</span> – Web/Graphic Intern`
+                        `<br><br><span class="italic bg-dark border-1 px-2 text-center font-black py-0.5 rounded-lg">1000 Islands Gan. Chamber</span> &nbsp; | &nbsp; Web/Graphic Intern &nbsp; | &nbsp; <span class="p-1 bg-white rounded-md text-xs font-sans text-dark font-bold">Jun 2024 – Sep 2024</span>`
                       )
                       .typeString(
-                        `<br><br><span class="inline-block bg-[#FF2381] text-center px-2 py-1 rounded-lg font-sans  text-lg font-bold">PetMap</span> – Software Engineer`
+                        `<br><br><span class="italic bg-dark border-1 px-2 text-center font-black py-0.5 rounded-lg">PetMap</span> &nbsp; | &nbsp; Software Engineer &nbsp; | &nbsp; <span class="p-1 bg-white rounded-md text-xs font-sans text-dark font-bold">Dec 2024 – Mar 2025</span>`
                       )
                       .typeString(
-                        `<br><br><span class="inline-block bg-[#2B5D81] text-center px-2 py-1 rounded-lg font-sans text-lg  font-bold">3Tenets Consulting</span> – Full Stack Developer`
+                        `<br><br><span class="italic bg-dark border-1 px-2 text-center font-black py-0.5 rounded-lg">3Tenets Consulting</span> &nbsp; | &nbsp; Full Stack Developer &nbsp; | &nbsp; <span class="p-1 bg-white rounded-md text-xs font-sans text-dark font-bold">Jan 2025 – Present</span>`
                       )
                       .typeString(
-                        `<br><br><span class="inline-block bg-[#3A36BD] text-center px-2 py-1 rounded-lg font-sans text-lg  font-bold">Bridgewell Financial</span> – Software Engineering Intern`
+                        `<br><br><span class="italic bg-dark border-1 px-2 text-center font-black py-0.5 rounded-lg">Bridgewell Financial</span> &nbsp; | &nbsp; Software Engineering Intern &nbsp; | &nbsp; <span class="p-1 bg-white rounded-md text-xs font-sans text-dark font-bold">Feb 2025 – Apr 2025</span>`
                       )
-                      .start()
-                      .callFunction(() => {
+                      .start().callFunction(() => {
                         scrollToBottom();
                         setCurrSection(currSection + 1);
                       });
@@ -164,48 +163,6 @@ const Chatbox = () => {
                     cursor: "",
                   }}
                 />
-                {/* <div className="flex flex-wrap gap-3 font-sans font-black text-lg">
-                  <div className="group bg-[#2AB24C] text-center px-2 py-1 rounded-lg">
-                    <span className="group-hover:hidden">Weehooey</span>
-                    <span className="hidden group-hover:block italic font-bold">
-                      Information Technology Intern
-                    </span>
-                  </div>
-
-                  <div className="group w-fit bg-[#7d393a] text-center px-2 py-1 rounded-lg">
-                    <span className="group-hover:hidden">
-                      200 Islands Gan. Chamber
-                    </span>
-                    <span className="hidden group-hover:block italic font-bold">
-                      Web and Graphic Designer Intern
-                    </span>
-                  </div>
-
-                  <div className=" group bg-[#FF2381] text-center px-2 py-1 rounded-lg">
-                    <span className="group-hover:hidden">PetMap</span>
-                    <span className="hidden group-hover:block italic font-bold">
-                      Software Engineer
-                    </span>
-                  </div>
-
-                  <div className=" group bg-[#2B5D81] text-center px-2 py-1 rounded-lg">
-                    <span className="group-hover:hidden">
-                      3Tenets Consulting
-                    </span>
-                    <span className="hidden group-hover:block italic font-bold">
-                      Full Stack Developer
-                    </span>
-                  </div>
-
-                  <div className=" group bg-[#3A36BD] text-center px-2 py-1 rounded-lg">
-                    <span className="group-hover:hidden">
-                      Bridgewell Financial
-                    </span>
-                    <span className="hidden group-hover:block italic font-bold">
-                      Software Engineering Intern
-                    </span>
-                  </div>
-                </div> */}
               </div>
             )}
           </div>
