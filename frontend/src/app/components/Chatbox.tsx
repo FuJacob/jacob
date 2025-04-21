@@ -188,7 +188,7 @@ const Chatbox = () => {
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        'check out my <a href="https://github.com/fujacob" class="italic bg-dark border-1 px-1 py-0.5 rounded-lg">github</a>.'
+                        'check out my <a href="https://github.com/fujacob" target="_blank" class="italic bg-dark border-1 px-1 py-0.5 rounded-lg">github</a>.'
                       )
                       .start()
                       .callFunction(() => {
@@ -206,7 +206,7 @@ const Chatbox = () => {
           </div>
         )}
 
-        {/* ===== PERSONAL INTERESTS SECTION ===== */}
+        {/* ===== PERSONAL INTERESTS SECTION =====
         {currSection >= 4 && (
           <div className="flex flex-col gap-3">
             <motion.div
@@ -243,10 +243,10 @@ const Chatbox = () => {
               </div>
             )}
           </div>
-        )}
+        )} */}
 
         {/* ===== CONTACT INFORMATION SECTION ===== */}
-        {currSection >= 5 && (
+        {currSection >= 4 && (
           <div className="flex flex-col gap-3">
             <motion.div
               initial={{ opacity: 0 }}
@@ -260,13 +260,13 @@ const Chatbox = () => {
               <Question question="how can i contact you?" />
             </motion.div>
 
-            {showResponse >= 6 && (
+            {showResponse >= 5 && (
               <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        'you can reach me at <a href="mailto:jjacobfu@gmail.com" class="italic bg-dark border-1 px-1 py-0.5 rounded-lg">jjacobfu@gmail.com</a>, or connect/send me a message on <a href="https://www.linkedin.com/in/fujacob/" class="italic bg-dark border-1 px-1 py-0.5 rounded-lg">linkedin</a>.'
+                        'you can reach me at <a href="mailto:jjacobfu@gmail.com" class="italic bg-dark border-1 px-1 py-0.5 rounded-lg">jjacobfu@gmail.com</a>, or connect/send me a message on <a href="https://www.linkedin.com/in/fujacob/" target="_blank"  class="italic bg-dark border-1 px-1 py-0.5 rounded-lg">linkedin</a>.'
                       )
                       .start()
                       .callFunction(() => {
@@ -285,7 +285,7 @@ const Chatbox = () => {
         )}
 
         {/* ===== PERSONAL INTERESTS SECTION ===== */}
-        {currSection >= 6 && (
+        {currSection >= 5  && (
           <div className="flex flex-col gap-3">
             <motion.div
               initial={{ opacity: 0 }}
@@ -300,7 +300,7 @@ const Chatbox = () => {
           </div>
         )}
 
-        {showResponse >= 7 && (
+        {showResponse >= 6  && (
           <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
             <Typewriter
               onInit={(typewriter) => {

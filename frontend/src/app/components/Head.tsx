@@ -24,14 +24,14 @@ const Head = () => {
             }}
           >
             <img
-              src="avatar4.jpg"
+              src="avatarbw.png"
               alt="profile picture of jacob"
               className="w-24 h-24 sm:w-40 sm:h-40 rounded-full border-4 shadow-2xl object-cover"
             />
           </motion.div>
         </div>
         <div className="flex-1 flex-col ">
-          <div className="flex text-5xl font-semibold mb-6 gap-4">
+          <div className="flex sm:flex-row flex-col text-5xl font-semibold mb-6 sm:gap-4">
             <motion.div
               initial={{ y: -500 }}
               animate={{ y: 0 }}
@@ -56,7 +56,7 @@ const Head = () => {
               }}
               className="font-black"
             >
-              jacob fu.
+              jacob fu<span className="font-semibold">.</span>
             </motion.div>
           </div>
           {/* <h2 className="font-bold mb-4">

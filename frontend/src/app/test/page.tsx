@@ -1,12 +1,20 @@
-"use client"
+"use client";
 import React from "react";
 import Message from "../components/Message";
 import Time from "../components/Time";
-import Head from "../components/Head"
-import Typewriter from "typewriter-effect"
+import Head from "../components/Head";
+import Typewriter from "typewriter-effect";
 const page = () => {
   return (
     <>
+  <div className="p-24">
+        <h1 className="text-sm sm:text-9xl font-semibold">
+          @fujacob
+          <p className="font-black text-base sm:text-9xl">
+            jacob.fu@uwaterloo.ca
+          </p>
+        </h1>
+  </div>
       <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out text-2xl">
         <Typewriter
           onInit={(typewriter) => {
@@ -27,7 +35,6 @@ const page = () => {
                 `<br><br><span class="italic bg-dark border-1 px-2 text-center font-black py-0.5 rounded-lg">Bridgewell Financial</span> &nbsp; | &nbsp; Software Engineering Intern &nbsp; | &nbsp; <span class="p-1 bg-white rounded-md text-xs font-sans text-dark font-bold">Feb 2025 – Apr 2025</span>`
               )
               .start();
-
           }}
           options={{
             delay: 2,
