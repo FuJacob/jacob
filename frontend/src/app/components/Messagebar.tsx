@@ -59,7 +59,7 @@ const Messagebar = () => {
         className="flex justify-between items-center bg-accent rounded-lg p-1 w-4/5 h-16"
       >
         <form className="w-full" onSubmit={handleSubmit}>
-          <div className="flex items-center w-full rounded-lg">
+          <div className="flex items-center w-full rounded-lg text-lg sm:text-2xl">
             <input
               value={currMsg}
               className="px-4 focus:outline-none w-full mb-1"

@@ -136,24 +136,24 @@ const Chatbox = () => {
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        `<span class="bg-dark border-1 px-2 text-center py-0.5 rounded-lg">Weehooey<br class="sm:hidden"/> (Oct 2023 - Jan 2024)<br class="sm:hidden"/> | IT Intern</span>`
+                        '<span class="font-black text-xl text-center py-0.5 rounded-lg">Weehooey</span><span class="ml-2 text-xs font-sans italic rounded-2xl">Oct 2023 - Jan 2024</span><br /><span class="bg-dark font-bold border-1 px-2 text-center py-0.5 rounded-lg">Information Technology Intern</span>'
                       )
                       .typeString(
-                        `<br><br><span class="bg-dark border-1 px-2 text-center py-0.5 rounded-lg">1000 Islands Gan. Chamber<br class="sm:hidden"/> (Jun 2024 – Sep 2024)<br class="sm:hidden"/> | Web/Graphic Intern</span>`
+                        '<br><br><span class="font-black text-xl text-center py-0.5 rounded-lg">1000 Islands Gan. Chamber</span><span class="ml-2 text-xs font-sans italic rounded-2xl">Jun 2024 – Sep 2024</span><br /><span class="bg-dark font-bold border-1 px-2 text-center py-0.5 rounded-lg">Web/Graphic Intern</span>'
                       )
                       .typeString(
-                        `<br><br><span class="bg-dark border-1 px-2 text-center py-0.5 rounded-lg">PetMap<br class="sm:hidden"/> (Dec 2024 – Mar 2025)<br class="sm:hidden"/> | Software Engineer</span>`
+                        '<br><br><span class="font-black text-xl text-center py-0.5 rounded-lg">PetMap</span><span class="ml-2 text-xs font-sans italic rounded-2xl">Dec 2024 – Mar 2025</span><br /><span class="bg-dark font-bold border-1 px-2 text-center py-0.5 rounded-lg">Software Engineer</span>'
                       )
                       .typeString(
-                        `<br><br><span class="bg-dark border-1 px-2 text-center py-0.5 rounded-lg">3Tenets Consulting<br class="sm:hidden"/> (Jan 2025 – Present)<br class="sm:hidden"/> | Full Stack Developer</span>`
+                        '<br><br><span class="font-black text-xl text-center py-0.5 rounded-lg">3Tenets Consulting</span><span class="ml-2 text-xs font-sans italic rounded-2xl">Jan 2025 – Present</span><br /><span class="bg-dark font-bold border-1 px-2 text-center py-0.5 rounded-lg">Full Stack Developer</span>'
                       )
                       .typeString(
-                        `<br><br><span class="bg-dark border-1 px-2 text-center py-0.5 rounded-lg">Bridgewell Financial<br class="sm:hidden"/> (Feb 2025 – Apr 2025)<br class="sm:hidden"/> | Software Engineering Intern</span>`
+                        '<br><br><span class="font-black text-xl text-center py-0.5 rounded-lg">Bridgewell Financial</span><span class="ml-2 text-xs font-sans italic rounded-2xl">Feb 2025 – Apr 2025</span><br /><span class="bg-dark font-bold border-1 px-2 text-center py-0.5 rounded-lg">Software Engineering Intern</span>'
                       )
                       .start()
                       .callFunction(() => {
-                        scrollToBottom();
                         setCurrSection(currSection + 1);
+                        scrollToBottom();
                       });
                   }}
                   options={{

@@ -7,14 +7,40 @@ import Typewriter from "typewriter-effect";
 const page = () => {
   return (
     <>
-  <div className="p-24">
+      <span className="font-black text-xl text-center py-0.5 rounded-lg">
+        Weehooey
+      </span>
+      <span className="ml-2 text-xs font-sans italic rounded-2xl">
+        Oct 2023 - Jan 2024
+      </span>
+      <br />
+      <span className="bg-dark font-bold border-1 px-2 text-center py-0.5 rounded-lg">
+        Information Technology Intern
+      </span>
+  
+      <Typewriter
+        onInit={(typewriter) => {
+          typewriter
+            .typeString('<span class="font-black text-xl text-center py-0.5 rounded-lg">Weehooey</span><span class="ml-2 text-xs font-sans italic rounded-2xl">Oct 2023 - Jan 2024</span><br /><span class="bg-dark font-bold border-1 px-2 text-center py-0.5 rounded-lg">Information Technology Intern</span>')
+            .typeString('<br><br><span class="font-black text-xl text-center py-0.5 rounded-lg">1000 Islands Gan. Chamber</span><span class="ml-2 text-xs font-sans italic rounded-2xl">Jun 2024 – Sep 2024</span><br /><span class="bg-dark font-bold border-1 px-2 text-center py-0.5 rounded-lg">Web/Graphic Intern</span>')
+            .typeString('<br><br><span class="font-black text-xl text-center py-0.5 rounded-lg">PetMap</span><span class="ml-2 text-xs font-sans italic rounded-2xl">Dec 2024 – Mar 2025</span><br /><span class="bg-dark font-bold border-1 px-2 text-center py-0.5 rounded-lg">Software Engineer</span>')
+            .typeString('<br><br><span class="font-black text-xl text-center py-0.5 rounded-lg">3Tenets Consulting</span><span class="ml-2 text-xs font-sans italic rounded-2xl">Jan 2025 – Present</span><br /><span class="bg-dark font-bold border-1 px-2 text-center py-0.5 rounded-lg">Full Stack Developer</span>')
+            .typeString('<br><br><span class="font-black text-xl text-center py-0.5 rounded-lg">Bridgewell Financial</span><span class="ml-2 text-xs font-sans italic rounded-2xl">Feb 2025 – Apr 2025</span><br /><span class="bg-dark font-bold border-1 px-2 text-center py-0.5 rounded-lg">Software Engineering Intern</span>')
+            .start();
+        }}
+        options={{
+          delay: 2,
+          cursor: "",
+        }}
+      />
+      <div className="p-24">
         <h1 className="text-sm sm:text-9xl font-semibold">
           @fujacob
           <p className="font-black text-base sm:text-9xl">
             jacob.fu@uwaterloo.ca
           </p>
         </h1>
-  </div>
+      </div>
       <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out text-2xl">
         <Typewriter
           onInit={(typewriter) => {
