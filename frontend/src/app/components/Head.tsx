@@ -31,7 +31,7 @@ const Head = () => {
           </motion.div>
         </div>
         <div className="flex-1 flex-col ">
-          <div className="flex sm:flex-row flex-col text-5xl font-semibold mb-6 sm:gap-4">
+          <div className="flex sm:flex-row flex-col text-xl sm:text-5xl font-semibold mb-6 sm:gap-4">
             <motion.div
               initial={{ y: -500 }}
               animate={{ y: 0 }}
@@ -54,7 +54,7 @@ const Head = () => {
                 delay: 0.2,
                 duration: 1,
               }}
-              className="font-black"
+              className="text-6xl sm:text-5xl font-black"
             >
               jacob fu<span className="font-semibold">.</span>
             </motion.div>
@@ -119,7 +119,7 @@ const Head = () => {
       <Time />
       <motion.div
         initial={{ scale: 0 }}
-        animate={{scale: 1 }}
+        animate={{ scale: 1 }}
         transition={{
           type: "spring",
           ease: "easeInOut",
