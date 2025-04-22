@@ -46,7 +46,7 @@ const Messagebar = () => {
     setCurrMsg("");
   };
   return (
-    <div className="flex w-full gap-2 mb-4 text-2xl">
+    <div className="flex w-full gap-2 sm:mb-4 text-2xl">
       <motion.div
         initial={{ y: 100 }}
         animate={{ y: 0 }}
