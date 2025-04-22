@@ -57,7 +57,7 @@ const Chatbox = () => {
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        `hi i'm jacob fu. i study cs & finance at waterloo. i like to build sometimes. i like playing volleyball and badminton with my friends.`
+                        `hi i'm jacob fu. i study cs & finance at waterloo. i like to build random stuff sometimes. i also like playing volleyball and badminton, and i'm goated at valorant.`
                       )
                       .start()
                       .callFunction(() => {
@@ -98,9 +98,6 @@ const Chatbox = () => {
                         `↪ in grade 8 i made a popular .io game on modd.io`
                       )
                       .typeString(`<br>↪ in grade 12 i did 2 internships`)
-                      .typeString(
-                        `<br>↪ in 1a term of waterloo i learnt python in CFM101`
-                      )
                       .typeString(`<br>↪ then i went to 5 hackathons`)
                       .typeString(`<br>↪ now i am here`)
                       .start()
@@ -134,26 +131,27 @@ const Chatbox = () => {
             </motion.div>
 
             {showResponse >= 3 && (
-              <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out text-xl border-1 p-4 ">
+              <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out text-lg ">
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        `<span class="italic bg-dark border-1 px-2 text-center font-black py-0.5 rounded-lg">Weehooey</span> &nbsp; | &nbsp; IT Intern &nbsp; | &nbsp; <span class="p-1 bg-white rounded-md text-xs font-sans text-dark font-bold">Oct 2023 - Jan 2024</span>`
+                        `<span class="bg-dark border-1 px-2 text-center py-0.5 rounded-lg">Weehooey<br class="sm:hidden"/> (Oct 2023 - Jan 2024)<br class="sm:hidden"/> | IT Intern</span>`
                       )
                       .typeString(
-                        `<br><br><span class="italic bg-dark border-1 px-2 text-center font-black py-0.5 rounded-lg">1000 Islands Gan. Chamber</span> &nbsp; | &nbsp; Web/Graphic Intern &nbsp; | &nbsp; <span class="p-1 bg-white rounded-md text-xs font-sans text-dark font-bold">Jun 2024 – Sep 2024</span>`
+                        `<br><br><span class="bg-dark border-1 px-2 text-center py-0.5 rounded-lg">1000 Islands Gan. Chamber<br class="sm:hidden"/> (Jun 2024 – Sep 2024)<br class="sm:hidden"/> | Web/Graphic Intern</span>`
                       )
                       .typeString(
-                        `<br><br><span class="italic bg-dark border-1 px-2 text-center font-black py-0.5 rounded-lg">PetMap</span> &nbsp; | &nbsp; Software Engineer &nbsp; | &nbsp; <span class="p-1 bg-white rounded-md text-xs font-sans text-dark font-bold">Dec 2024 – Mar 2025</span>`
+                        `<br><br><span class="bg-dark border-1 px-2 text-center py-0.5 rounded-lg">PetMap<br class="sm:hidden"/> (Dec 2024 – Mar 2025)<br class="sm:hidden"/> | Software Engineer</span>`
                       )
                       .typeString(
-                        `<br><br><span class="italic bg-dark border-1 px-2 text-center font-black py-0.5 rounded-lg">3Tenets Consulting</span> &nbsp; | &nbsp; Full Stack Developer &nbsp; | &nbsp; <span class="p-1 bg-white rounded-md text-xs font-sans text-dark font-bold">Jan 2025 – Present</span>`
+                        `<br><br><span class="bg-dark border-1 px-2 text-center py-0.5 rounded-lg">3Tenets Consulting<br class="sm:hidden"/> (Jan 2025 – Present)<br class="sm:hidden"/> | Full Stack Developer</span>`
                       )
                       .typeString(
-                        `<br><br><span class="italic bg-dark border-1 px-2 text-center font-black py-0.5 rounded-lg">Bridgewell Financial</span> &nbsp; | &nbsp; Software Engineering Intern &nbsp; | &nbsp; <span class="p-1 bg-white rounded-md text-xs font-sans text-dark font-bold">Feb 2025 – Apr 2025</span>`
+                        `<br><br><span class="bg-dark border-1 px-2 text-center py-0.5 rounded-lg">Bridgewell Financial<br class="sm:hidden"/> (Feb 2025 – Apr 2025)<br class="sm:hidden"/> | Software Engineering Intern</span>`
                       )
-                      .start().callFunction(() => {
+                      .start()
+                      .callFunction(() => {
                         scrollToBottom();
                         setCurrSection(currSection + 1);
                       });
@@ -285,7 +283,7 @@ const Chatbox = () => {
         )}
 
         {/* ===== PERSONAL INTERESTS SECTION ===== */}
-        {currSection >= 5  && (
+        {currSection >= 5 && (
           <div className="flex flex-col gap-3">
             <motion.div
               initial={{ opacity: 0 }}
@@ -300,7 +298,7 @@ const Chatbox = () => {
           </div>
         )}
 
-        {showResponse >= 6  && (
+        {showResponse >= 6 && (
           <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
             <Typewriter
               onInit={(typewriter) => {

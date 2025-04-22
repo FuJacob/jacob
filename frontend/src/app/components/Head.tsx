@@ -75,7 +75,7 @@ const Head = () => {
             className="hidden sm:block bg-dark p-3 rounded-lg shadow-2xl"
           >
             <h2 className="flex items-center gap-1">
-              ↪ incoming intern @{" "}
+              ↪ incoming @{" "}
               <img
                 src="hubspot.png"
                 className="w-4 h-4 rounded-lg"
