@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${noto_sans.variable} ${neuton.variable} antialiased max-w-screen-sm mx-auto`}
+        className={`${noto_sans.variable} ${neuton.variable} antialiased max-w-screen-sm min-h-screen overflow-y-auto mx-auto`}
       >
         {children}
       </body>
