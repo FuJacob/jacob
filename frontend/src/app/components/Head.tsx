@@ -75,7 +75,7 @@ const Head = () => {
             className="hidden sm:block bg-dark p-3 rounded-lg shadow-2xl"
           >
             <h2 className="flex items-center gap-1">
-              ↪ incoming @{" "}
+              ↳ incoming @{" "}
               <img
                 src="hubspot.png"
                 className="w-4 h-4 rounded-lg"
@@ -85,7 +85,7 @@ const Head = () => {
               summer '25
             </h2>{" "}
             <h2 className="flex items-center gap-1">
-              ↪ cs & finance student @
+              ↳ cs & finance student @
               <img
                 src="waterloo.png"
                 className="w-4 h-4 rounded-lg"
@@ -100,13 +100,13 @@ const Head = () => {
       {/* mobile version */}
       <div className="sm:hidden bg-dark p-3 rounded-lg shadow-2xl">
         <h2 className="flex items-center gap-1">
-          ↪ incoming intern @{" "}
+          ↳ incoming intern @{" "}
           <img src="hubspot.png" className="w-4 h-4 rounded-lg" alt="hubspot" />
           <span className="text-hubspot font-bold">hubspot</span> &mdash; summer
           '25
         </h2>{" "}
         <h2 className="flex items-center gap-1">
-          ↪ cs & finance @
+          ↳ cs & finance @
           <img
             src="waterloo.png"
             className="w-4 h-4 rounded-lg"

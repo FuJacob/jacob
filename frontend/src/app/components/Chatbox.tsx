@@ -95,11 +95,11 @@ const Chatbox = () => {
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        `↪ in grade 8 i made a popular .io game on modd.io`
+                        `↳ in grade 8 i made a popular .io game on modd.io`
                       )
-                      .typeString(`<br>↪ in grade 12 i did 2 internships`)
-                      .typeString(`<br>↪ then i went to 5 hackathons`)
-                      .typeString(`<br>↪ now i am here`)
+                      .typeString(`<br>↳ in grade 12 i did 2 internships`)
+                      .typeString(`<br>↳ then i went to 5 hackathons`)
+                      .typeString(`<br>↳ now i am here`)
                       .start()
                       .callFunction(() => {
                         scrollToBottom();
