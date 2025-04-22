@@ -18,6 +18,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --safe-height: 100dvh;
     --background: #262625;
     --foreground: #ededed;
   }
