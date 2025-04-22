@@ -28,6 +28,10 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${noto_sans.variable} ${neuton.variable} antialiased max-w-screen-sm mx-auto max-h-[100dvh]`}
+        style={{
+          background: "url('bg.svg')",
+          backgroundSize: "cover"
+         }}
       >
         {children}
       </body>
