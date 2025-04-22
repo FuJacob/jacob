@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 export default function Home() {
   return (
     <motion.div
-      className="flex sm:justify-center items-center h-screen "
+      className="flex justify-end sm:justify-center items-end sm:items-center h-screen "
       initial={{ scale: 0.95 }}
       whileHover={{ scale: 1 }}
       transition={{
