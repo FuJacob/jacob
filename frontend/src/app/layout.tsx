@@ -15,7 +15,7 @@ const noto_sans = Noto_Sans({
   variable: "--font-noto-sans",
   subsets: ["latin"],
 });
-
+import { Analytics } from "@vercel/analytics/react";
 export const metadata: Metadata = {
   title: "jacob fu - SWE, UW student",
   description:
@@ -77,6 +77,7 @@ export default function RootLayout({
         {children}
       </body>
       <GoogleAnalytics gaId="G-Q3L1FNZM20" />
+      <Analytics />
     </html>
   );
 }
