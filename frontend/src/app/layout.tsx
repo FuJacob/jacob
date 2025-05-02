@@ -17,7 +17,7 @@ const noto_sans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Jacob Fu – Software Engineer",
+  title: "jacob fu - SWE, UW student",
   description:
     "Portfolio of Jacob Fu – Software Engineering student at the University of Waterloo. Explore projects, experience at HubSpot, Bridgewell Financial, PetMap, and more. Skilled in React, Next.js, TypeScript, Node.js, and cloud technologies.",
   keywords: [
