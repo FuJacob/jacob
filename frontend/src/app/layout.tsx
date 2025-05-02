@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Neuton, Noto_Sans } from "next/font/google";
 import "./globals.css";
 
+import Script from "next/script";
+
 const neuton = Neuton({
   variable: "--font-neuton",
   subsets: ["latin"],
@@ -65,12 +67,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-Q3L1FNZM20"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q3L1FNZM20');
+  `}
+      </Script>
       <body
         className={`${noto_sans.variable} ${neuton.variable} antialiased max-w-screen-sm mx-auto`}
         style={{
           background: "url('bg.svg')",
-          backgroundSize: "cover"
-         }}
+          backgroundSize: "cover",
+        }}
       >
         {children}
       </body>

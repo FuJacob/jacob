@@ -4,6 +4,7 @@ import Head from "./components/Head";
 import Messagebar from "./components/Messagebar";
 import { MessageProvider } from "./MessageContext";
 import { motion } from "motion/react";
+
 export default function Home() {
   return (
     <motion.div
