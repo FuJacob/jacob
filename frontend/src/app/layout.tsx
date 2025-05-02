@@ -15,8 +15,47 @@ const noto_sans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "jacob fu",
-  description: "",
+  title: "Jacob Fu – Software Engineer",
+  description:
+    "Portfolio of Jacob Fu – Software Engineering student at the University of Waterloo. Explore projects, experience at HubSpot, Bridgewell Financial, PetMap, and more. Skilled in React, Next.js, TypeScript, Node.js, and cloud technologies.",
+  keywords: [
+    "Jacob Fu",
+    "Software Engineer",
+    "Frontend Developer",
+    "Full Stack Developer",
+    "University of Waterloo",
+    "HubSpot Intern",
+    "Next.js Portfolio",
+    "React Developer",
+    "TypeScript Developer",
+    "Cloud Engineer",
+    "Student Portfolio",
+    "Web Developer Portfolio",
+    "CanadaBuys Platform",
+    "PetMap",
+    "Bridgewell Financial",
+    "3Tenets Consulting",
+    "RBveal",
+  ],
+  authors: [{ name: "Jacob Fu", url: "https://fujacob.tech" }],
+  creator: "Jacob Fu",
+  openGraph: {
+    title: "Jacob Fu – Software Engineer Portfolio",
+    description:
+      "Explore the portfolio of Jacob Fu, a Waterloo CS student and software developer with experience at HubSpot and more. Projects include AI tools, cloud apps, and award-winning hackathon solutions.",
+    url: "https://fujacob.tech",
+    siteName: "Jacob Fu Portfolio",
+    type: "website",
+    locale: "en_CA",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jacob Fu – Software Engineer Portfolio",
+    description:
+      "Explore projects and professional experience from Jacob Fu, software engineer and Waterloo student.",
+    creator: "@fujacob",
+  },
+  metadataBase: new URL("https://fujacob.tech"),
 };
 
 export default function RootLayout({

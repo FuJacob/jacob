@@ -304,7 +304,7 @@ const Chatbox = () => {
               onInit={(typewriter) => {
                 typewriter
 
-                  .typeString("sure. ask me anything below then 👇")
+                  .typeString("sure. ask me anything below then :-)")
                   .start()
                   .callFunction(() => {
                     scrollToBottom();
