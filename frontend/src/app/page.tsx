@@ -17,7 +17,7 @@ export default function Home() {
   });
   return (
     <motion.div
-      className="flex flex-col justify-end sm:justify-center items-center sm:justify-center sm:items-center h-[90vh] sm:h-screen"
+      className="flex flex-col justify-end sm:justify-center items-center sm:justify-center sm:items-center h-screen"
       // initial={{ scale: 0.95 }}
       // whileHover={{ scale: 1 }}
       // transition={{
