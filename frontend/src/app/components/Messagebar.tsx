@@ -94,7 +94,7 @@ const Messagebar = () => {
           <FaGithub />
         </Icon>
         <Icon link="https://www.linkedin.com/in/fujacob/">
-          <FaTwitter />
+          <div className="text-white text-2xl font-black">𝕏</div>
         </Icon>{" "}
         <Icon link="mailto:jjacobfu@gmail.com">
           <FaEnvelope />
