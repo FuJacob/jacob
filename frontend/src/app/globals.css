@@ -8,6 +8,8 @@
 
 
 
+html, body, body > header { height: 100%; margin: 0; padding: 0; }
+
 @theme inline {
   --color-hubspot: #ff5c34;
   --color-dark: #141412;
@@ -27,7 +29,6 @@
 }
 
 body {
-  height: 100dvh;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-neuton), Arial, Helvetica, sans-serif;
