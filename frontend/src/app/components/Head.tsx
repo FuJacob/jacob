@@ -26,7 +26,7 @@ const Head = () => {
             <img
               src="avatarbw.png"
               alt="profile picture of jacob"
-              className="w-24 h-24 sm:w-40 sm:h-40 rounded-full border-4 shadow-2xl object-cover"
+              className="hover:border-hubspot border-2 border-accent transition hover:duration-300 ease-in-out  w-24 h-24 sm:w-40 sm:h-40 rounded-full border-4 shadow-2xl object-cover"
             />
           </motion.div>
         </div>
@@ -72,7 +72,7 @@ const Head = () => {
               delay: 0.4,
               duration: 1,
             }}
-            className="hidden sm:block bg-dark p-3 rounded-lg shadow-2xl"
+            className="hover:border-hubspot border-2 border-accent transition hover:duration-300 ease-in-out  hidden sm:block bg-dark p-3 rounded-lg shadow-2xl"
           >
             <h2 className="flex items-center gap-1">
               ↳ incoming @{" "}
@@ -98,7 +98,7 @@ const Head = () => {
         </div>
       </div>{" "}
       {/* mobile version */}
-      <div className="sm:hidden bg-dark p-3 rounded-lg shadow-2xl">
+      <div className="sm:hidden  bg-dark p-3 rounded-lg shadow-2xl">
         <h2 className="flex items-center gap-1">
           ↳ incoming intern @{" "}
           <img src="hubspot.png" className="w-4 h-4 rounded-lg" alt="hubspot" />

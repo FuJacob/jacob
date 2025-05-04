@@ -56,7 +56,7 @@ const Messagebar = () => {
           delay: 0.5,
           duration: 1,
         }}
-        className="flex justify-between items-center bg-accent rounded-lg p-1 w-4/5 h-16"
+        className="hover:border-hubspot border-1 border-accent hover:border-2 transition hover:duration-300 ease-in-out flex justify-between items-center bg-accent rounded-lg p-1 w-4/5 h-16"
       >
         <form className="w-full" onSubmit={handleSubmit}>
           <div className="flex items-center w-full rounded-lg text-lg sm:text-2xl">

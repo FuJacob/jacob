@@ -53,7 +53,7 @@ const Time = () => {
         delay: 0.6,
         duration: 1,
       }}
-      className="bg-dark rounded-lg flex justify-between items-center w-full h-20 px-4 py-6 mt-2"
+      className="hover:border-hubspot border-2 border-accent transition hover:duration-300 ease-in-out  bg-dark rounded-lg flex justify-between items-center w-full h-20 px-4 py-6 mt-2"
     >
       <div className="flex w-full items-center gap-2">
         <img src="snoopy1.png" alt="snoopy" className="w-4 sm:w-16" />
