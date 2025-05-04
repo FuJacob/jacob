@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 const Head = () => {
   return (
     <div className="text-sm sm:text-lg flex flex-col w-full">
-      <div className="flex items-center gap-4 h-36 sm:mb-6">
+      <div className="flex items-center gap-4 h-36 sm:mb-3">
         <div className="relative flex justify-center items-center w-1/3">
           {/* <motion.div
             initial={{ scale: 0 }}
