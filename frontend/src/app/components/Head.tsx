@@ -4,7 +4,7 @@ import Time from "./Time";
 import { motion } from "motion/react";
 const Head = () => {
   return (
-    <div className="text-lg flex flex-col w-full">
+    <div className="text-sm flex flex-col w-full">
       <div className="flex justify-between items-center gap-4">
         <div className="relative flex justify-center items-center w-1/3">
           <motion.div
@@ -54,7 +54,7 @@ const Head = () => {
                 delay: 0.2,
                 duration: 1,
               }}
-              className="text-6xl sm:text-5xl font-black"
+              className="text-5xl font-black"
             >
               jacob fu<span className="font-semibold">.</span>
             </motion.div>
