@@ -41,7 +41,7 @@ export default function Home() {
         </div>{" "}
       </div>
 
-      <div className="sm:h-9/10 w-full overflow-y-auto p-4 flex flex-col items-center justify-end text-xl bg-[#262624] shadow-2xl sm:rounded-3xl">
+      <div className="h-full sm:h-9/10 w-full overflow-y-auto p-4 flex flex-col items-center justify-end text-xl bg-[#262624] shadow-2xl sm:rounded-3xl">
         <MessageProvider>
           <Head />
           <Chatbox />
