@@ -17,7 +17,7 @@ export default function Home() {
   });
   return (
     <motion.div
-      className="flex flex-col sm:justify-center items-center sm:h-screen h-full"
+      className="flex flex-col sm:justify-center items-center sm:h-4/5 h-9/10"
       // initial={{ scale: 0.95 }}
       // whileHover={{ scale: 1 }}
       // transition={{
@@ -41,7 +41,7 @@ export default function Home() {
         </div>{" "}
       </div>
 
-      <div className="h-9/10 sm:h-4/5 w-full overflow-y-auto p-4 flex flex-col items-center justify-end text-xl bg-[#262624] shadow-2xl sm:rounded-3xl">
+      <div className=" w-full overflow-y-auto p-4 flex flex-col items-center justify-end text-xl bg-[#262624] shadow-2xl sm:rounded-3xl">
         <MessageProvider>
           <Head />
           <Chatbox />
