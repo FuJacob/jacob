@@ -4,15 +4,15 @@ import Time from "./Time";
 import { motion } from "motion/react";
 const Head = () => {
   return (
-    <div className="text-sm flex flex-col w-full">
-      <div className="flex justify-between items-center gap-4">
+    <div className="text-sm sm:text-lg flex flex-col w-full">
+      <div className="flex items-center gap-4 h-36 sm:mb-6">
         <div className="relative flex justify-center items-center w-1/3">
-          <motion.div
+          {/* <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 2, ease: "easeInOut" }}
             className="absolute z-50 left-21 top-16 w-6 h-6 sm:left-36 sm:top-28 sm:w-10 sm:h-10 bg-green-600 rounded-full border-4"
-          />
+          /> */}
           <motion.div
             initial={{ y: -2000, scale: 0 }}
             animate={{ y: 0, scale: 1 }}
@@ -30,8 +30,8 @@ const Head = () => {
             />
           </motion.div>
         </div>
-        <div className="flex-1 flex-col ">
-          <div className="flex sm:flex-row flex-col text-xl sm:text-5xl font-semibold mb-6 sm:gap-4">
+        <div className="flex justify-center items-center flex-col ">
+          <div className="flex sm:flex-row flex-col text-xl sm:text-5xl font-semibold sm:gap-4 sm:mb-4">
             <motion.div
               initial={{ y: -500 }}
               animate={{ y: 0 }}
