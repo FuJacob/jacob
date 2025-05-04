@@ -98,7 +98,7 @@ const Head = () => {
         </div>
       </div>{" "}
       {/* mobile version */}
-      <div className="sm:hidden  bg-dark p-3 rounded-lg shadow-2xl">
+      <div className="sm:hidden hover:border-hubspot border-2 border-accent transition hover:duration-300 ease-in-out bg-dark p-3 rounded-lg shadow-2xl">
         <h2 className="flex items-center gap-1">
           ↳ incoming intern @{" "}
           <img src="hubspot.png" className="w-4 h-4 rounded-lg" alt="hubspot" />
