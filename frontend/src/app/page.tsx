@@ -17,7 +17,7 @@ export default function Home() {
   });
   return (
     <motion.div
-      className="flex flex-col sm:justify-center items-center sm:h-4/5 w-full h-full"
+      className="flex flex-col sm:justify-center items-center sm:h-9/10 w-full h-full"
       // initial={{ scale: 0.95 }}
       // whileHover={{ scale: 1 }}
       // transition={{
@@ -29,11 +29,11 @@ export default function Home() {
       <div className="flex justify-center items-center text-secondary font-sans text-xs sm:text-sm font-bold sm:rounded-t-3xl w-full p-4 bg-dark shadow-2xl gap-4 ">
         <div className="sm:flex hidden justify-center items-center gap-1">
           {" "}
-          <FaRocket /> seeking winter 2026{" "}
+          <FaRocket /> Software Engineer
         </div>
         <span className="hidden sm:flex">•</span>
         <div className="flex justify-center items-center gap-1">
-          <FaLocationPin /> Toronto, Canada
+          <FaLocationPin /> Waterloo, Canada
         </div>
         •
         <div className="flex justify-center items-center gap-1">

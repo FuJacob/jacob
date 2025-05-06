@@ -34,7 +34,7 @@ const Chatbox = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-left items-start w-full h-4/10 sm:h-1/2 gap-12 sm:text-2xl bg-">
+    <div className="flex flex-col justify-left items-start w-full h-4/10 sm:h-1/2 gap-12 text-base sm:text-xl bg-">
       <div className="overflow-y-auto space-y-8 h-full">
         {/* ===== INTRODUCTION SECTION ===== */}
 
@@ -57,7 +57,7 @@ const Chatbox = () => {
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        `hi i'm jacob fu. i study cs & finance at waterloo. i like to build random stuff sometimes. i also like playing volleyball and badminton, and i'm goated at valorant.`
+                        `hi i'm jacob fu. i study cs & finance at waterloo. i like playing volleyball and badminton, and i'm goated at valorant.`
                       )
                       .start()
                       .callFunction(() => {
