@@ -2,6 +2,9 @@
 import React from "react";
 import Time from "./Time";
 import { motion } from "motion/react";
+import { FaBriefcase } from "react-icons/fa";
+import { FaFileLines } from "react-icons/fa6";
+import ResumeButton from "./ResumeButton";
 const Head = () => {
   return (
     <div className="text-sm sm:text-lg flex flex-col w-full">
@@ -13,6 +16,9 @@ const Head = () => {
             transition={{ duration: 0.5, delay: 2, ease: "easeInOut" }}
             className="absolute z-50 left-21 top-16 w-6 h-6 sm:left-36 sm:top-28 sm:w-10 sm:h-10 bg-green-600 rounded-full border-4"
           /> */}
+          <div className="absolute z-50 left-21 top-16 w-6 h-6 sm:left-36 sm:top-28">
+            <ResumeButton />
+          </div>{" "}
           <motion.div
             initial={{ y: -2000, scale: 0 }}
             animate={{ y: 0, scale: 1 }}

@@ -15,7 +15,7 @@ import { FaHashtag } from "react-icons/fa";
 
 import { useState } from "react";
 import { useMessage } from "../MessageContext";
-import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight, FaUsers } from "react-icons/fa6";
 const Messagebar = () => {
   // const [answer, setAnswer] = useState("");
   const [showIcons, setShowIcons] = useState(false);
@@ -66,7 +66,7 @@ const Messagebar = () => {
               value={currMsg}
               className="px-4 focus:outline-none w-full mb-1"
               type="text"
-              placeholder="ask me anything :)"
+              placeholder="ask me anything ..."
               onChange={(e) => setCurrMsg(e.target.value)}
             />
             <button
@@ -86,7 +86,7 @@ const Messagebar = () => {
           type: "spring",
           ease: "easeInOut",
           delay: 0.8,
-          duration: 1,
+          duration: 0.5,
         }}
         className="flex justify-center flex-row items-center gap-1 rounded-lg h-16 bg-accent p-2 transition duration-300 overflow-hidden"
       >
@@ -136,7 +136,9 @@ const Messagebar = () => {
           onClick={() => setShowIcons(!showIcons)}
           className="flex justify-center items-center bg-dark font-bold w-10 h-10 text-xl font-sans rounded-lg hover:bg-hubspot hover:scale-110 hover:duration-300"
         >
-          <FaHashtag />
+          {/* <FaHashtag /> */}
+
+          <FaUsers />
         </motion.div>
       </motion.div>
     </div>
