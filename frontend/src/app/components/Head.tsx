@@ -7,7 +7,7 @@ import { FaFileLines } from "react-icons/fa6";
 import ResumeButton from "./ResumeButton";
 const Head = () => {
   return (
-    <div className="text-sm sm:text-lg flex flex-col w-full">
+    <div className="text-sm sm:text-lg flex flex-col w-full justify-end flex-1">
       <div className="flex items-center gap-4 h-36 sm:mb-3">
         <div className="relative flex justify-center items-center w-1/3">
           {/* <motion.div
@@ -32,7 +32,7 @@ const Head = () => {
             <img
               src="avatarbw.png"
               alt="profile picture of jacob"
-              className="hover:border-hubspot border-2 border-accent transition hover:duration-300 ease-in-out  w-24 h-24 sm:w-40 sm:h-40 rounded-full border-4 shadow-2xl object-cover"
+              className="hover:border-hubspot border-2 border-accent transition hover:duration-300 ease-in-out  w-24 h-24 sm:w-40 sm:h-40 rounded-full shadow-2xl object-cover"
             />
           </motion.div>
         </div>

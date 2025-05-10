@@ -34,8 +34,8 @@ const Chatbox = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-left items-start w-full h-4/10 sm:h-1/2 gap-12 text-base sm:text-xl bg-">
-      <div className="overflow-y-auto space-y-8 h-full">
+    <div className=" overflow-y-auto flex flex-col justify-left items-start w-full h-4/10 sm:h-[55%] gap-12 text-base sm:text-xl bg-">
+      <div className="space-y-8 ">
         {/* ===== INTRODUCTION SECTION ===== */}
 
         {currSection >= 0 && (
