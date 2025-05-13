@@ -14,15 +14,15 @@ const Time = () => {
   const currDate = new Date().toLocaleDateString();
 
   const strings = [
-    "↳ i wanted to be a civil engineer, then an optometrist — now swe",
-    "↳ i built an io game in 2019 that hit 4.2M plays from 248K people",
-    "↳ i like to play poker but i get sooooo bored after an hour",
-    "↳ i've slept in MC building 5+ times in first year",
-    "↳ my favourite UW course so far is CFM101",
-    "↳ i was born in kingston, ON and have lived there my entire life",
-    "↳ i love playing volleyball but i'm not really good",
-    "↳ my favourite anime is naruto >:)",
-    "↳ my favourite movie is probably parasite, you should check it out!",
+    "↳ i wanted to be a civil engineer, then an optometrist — now i'm here",
+    "↳ i made an .io game in 2019 that hit 4.2M plays from 248K users",
+    "↳ i like poker, but i get bored after an hour every time",
+    "↳ i've crashed overnight in the MC building more than 5 times",
+    "↳ my favourite uwaterloo course so far has been CFM101",
+    "↳ born and raised in kingston, ON — have been here my whole life",
+    "↳ i love volleyball, even if i kind of suck at it",
+    "↳ favourite anime? easy — naruto",
+    "↳ favourite movie? probably parasite — you should watch it",
   ];
 
   useEffect(() => {

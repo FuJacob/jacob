@@ -283,7 +283,7 @@ const Chatbox = () => {
         )}
 
         {/* ===== CONTACT INFORMATION SECTION ===== */}
-        {currSection >= 4 && (
+        {currSection >= 5 && (
           <div className="flex flex-col gap-3">
             <motion.div
               initial={{ opacity: 0 }}
@@ -297,12 +297,12 @@ const Chatbox = () => {
               <Question question="i want to ask you more questions tho ..." />
             </motion.div>
 
-            {showResponse >= 5 && (
+            {showResponse >= 6 && (
               <div className="hover:shadow-2xl hover:p-4 hover:bg-dark rounded-2xl transition-all duration-300 ease-in-out">
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
-                      .typeString("sure, send me a message below then! ")
+                      .typeString("sure, send me a message below then :) ")
 
                       .start()
                       .callFunction(() => {

@@ -18,7 +18,7 @@ import { useMessage } from "../MessageContext";
 import { FaArrowRight, FaUsers } from "react-icons/fa6";
 const Messagebar = () => {
   // const [answer, setAnswer] = useState("");
-  const [showIcons, setShowIcons] = useState(false);
+  const [showIcons, setShowIcons] = useState(true);
   const [currMsg, setCurrMsg] = useState("");
   const { messages, setMessages } = useMessage();
 
@@ -133,7 +133,7 @@ const Messagebar = () => {
         <motion.div
           whileHover={{ rotate: 360 }}
           transition={{ duration: 0.1, ease: "easeInOut" }}
-          onClick={() => setShowIcons(!showIcons)}
+          onClick={() => setShowIcons((prev) => !prev)}
           className="flex justify-center items-center bg-dark font-bold w-10 h-10 text-xl font-sans rounded-lg hover:bg-hubspot hover:scale-110 hover:duration-300"
         >
           {/* <FaHashtag /> */}
