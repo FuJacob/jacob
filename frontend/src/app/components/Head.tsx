@@ -32,7 +32,7 @@ const Head = () => {
             <img
               src="avatarbw.png"
               alt="profile picture of jacob"
-              className="hover:border-hubspot border-2 border-accent transition hover:duration-300 ease-in-out  w-24 h-24 sm:w-40 sm:h-40 rounded-full shadow-2xl object-cover"
+              className="hover:border-hubspot border-2 border-accent transition hover:duration-300 ease-in-out  w-24 h-24 sm:w-40 sm:h-40 rounded-full shadow-2xl  object-cover "
             />
           </motion.div>
         </div>

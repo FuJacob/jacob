@@ -134,7 +134,7 @@ const Messagebar = () => {
           whileHover={{ rotate: 360 }}
           transition={{ duration: 0.1, ease: "easeInOut" }}
           onClick={() => setShowIcons((prev) => !prev)}
-          className="flex justify-center items-center bg-dark font-bold w-10 h-10 text-xl font-sans rounded-lg hover:bg-hubspot hover:scale-110 hover:duration-300"
+          className="flex justify-center items-center font-bold w-10 h-10 text-xl font-sans rounded-lg bg-hubspot hover:scale-110 hover:duration-300"
         >
           {/* <FaHashtag /> */}
 

@@ -14,15 +14,16 @@ const Time = () => {
   const currDate = new Date().toLocaleDateString();
 
   const strings = [
-    "↳ i wanted to be a civil engineer, then an optometrist — now i'm here",
-    "↳ i made an .io game in 2019 that hit 4.2M plays from 248K users",
+    "↳ i wanted to be a civil engineer, then an optometrist, now i'm here",
+    "↳ i made an .io game in 2019, got 4.2M plays from 248K users",
     "↳ i like poker, but i get bored after an hour every time",
     "↳ i've crashed overnight in the MC building more than 5 times",
     "↳ my favourite uwaterloo course so far has been CFM101",
-    "↳ born and raised in kingston, ON — have been here my whole life",
+    "↳ favourite colour? idk it always changes",
+    "↳ born and raised in kingston, ON — been here my whole life",
     "↳ i love volleyball, even if i kind of suck at it",
     "↳ favourite anime? easy — naruto",
-    "↳ favourite movie? probably parasite — you should watch it",
+    "↳ favourite movie? probably parasite",
   ];
 
   useEffect(() => {
@@ -56,7 +57,11 @@ const Time = () => {
       className="hover:border-hubspot border-2 border-accent transition hover:duration-300 ease-in-out  bg-dark rounded-lg flex justify-between items-center w-full h-20 px-4 py-6 mt-2"
     >
       <div className="flex w-full items-center gap-2">
-        <img src="snoopy1.png" alt="snoopy" className="w-4 sm:w-16" />
+        <img
+          src="snoopyicon.png"
+          alt="snoopy"
+          className="hidden sm:block w-16"
+        />
         <div className="flex flex-col">
           <h1 className="text-xs sm:text-sm font-semibold">
             here's some fun facts about me :{")"}
