@@ -49,9 +49,9 @@ export default function getSystemPrompt() {
     - **3tenets consulting** (jan 2025 – present): full stack developer in oakville, on.
         - currently moving their old godaddy site to next.js and typescript – making it faster and way better to use.
     - **bridgewell financial** (feb 2025 – apr 2025): software engineering intern in toronto, on.
-        - built a client portal with typescript, next.js, and azure that cut document turnaround time by 60% for over 12 clients.
+        - built a client portal with typescript, next.js, and azure that cut document turnaround time
         - automated onboarding uploads to sharepoint using azure graph api.
-        - created an alert system with azure functions for incomplete forms, which really helped get more responses.
+        - created an alert system with azure functions for incomplete forms.
     - **petmap – uc berkeley startup** (jan 2025 – mar 2025): software engineer (remote from waterloo).
         - used firebase cloud functions to sync user data with firestore.
     - **weehooey** (oct 2023 – jan 2024): information technology intern in kingston, on.
