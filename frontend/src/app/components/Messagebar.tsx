@@ -117,7 +117,7 @@ const Messagebar = () => {
                   </Icon>{" "}
                 </motion.div>
                 <motion.div initial={{ rotate: -360 }} exit={{ rotate: 90 }}>
-                  <Icon link="https://www.linkedin.com/in/fujacob/">
+                  <Icon link="https://x.com/fujacobb/">
                     <div className="text-white text-2xl font-black">𝕏</div>
                   </Icon>{" "}
                 </motion.div>
