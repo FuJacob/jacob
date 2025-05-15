@@ -60,7 +60,7 @@ export const metadata: Metadata = {
       "Explore projects and professional experience from Jacob Fu, software engineer and Waterloo student.",
     creator: "@fujacob",
   },
-  metadataBase: new URL("https://fujacob.tech"),
+  metadataBase: new URL("https://jacobfu.com"),
 };
 
 export default function RootLayout({
@@ -71,7 +71,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${noto_sans.variable} ${neuton.variable} antialiased  max-w-screen-sm mx-auto h-[90vh]  sm:h-screen flex justify-center items-center`}
+        className={`${noto_sans.variable} ${neuton.variable} antialiased max-w-screen-sm mx-auto h-[90vh] sm:h-screen flex justify-center items-center`}
+        style={{
+          backgroundSize: "cover",
+        }}
       >
         {children}
         <GoogleAnalytics gaId="G-Q3L1FNZM20" />

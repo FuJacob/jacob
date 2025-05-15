@@ -60,7 +60,12 @@ const Time = () => {
         <img
           src="snoopyicon.png"
           alt="snoopy"
-          className="hidden sm:block w-16"
+          className="hidden dark:sm:block w-16"
+        />
+        <img
+          src="snoopydark.png"
+          alt="snoopy"
+          className="hidden sm:block sm:dark:hidden w-16"
         />
         <div className="flex flex-col">
           <h1 className="text-xs sm:text-sm font-semibold">
