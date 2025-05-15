@@ -21,7 +21,7 @@ export default function Home() {
       // }}
     >
       <TopBoxBar />
-      <div className="h-full sm:h-9/10 w-full overflow-y-auto p-4 flex flex-col items-center justify-end text-xl bg-background shadow-2xl sm:rounded-b-3xl">
+      <div className="h-full sm:h-[56rem] w-full overflow-y-auto p-4 flex flex-col items-center justify-end text-xl bg-background shadow-2xl sm:rounded-b-3xl">
         <MessageProvider>
           <Head />
           <Chatbox />
