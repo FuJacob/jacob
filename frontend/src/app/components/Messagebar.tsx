@@ -58,7 +58,7 @@ const Messagebar = () => {
           delay: 0.5,
           duration: 1,
         }}
-        className="flex-1 hover:border-hubspot border-1 border-accent hover:border-2 transition hover:duration-300 ease-in-out flex justify-between items-center bg-accent rounded-lg p-1 h-16"
+        className="flex-1 hover:border-hubspot border-1 border-accent hover:border-2 transition hover:duration-300 ease-in-out flex justify-between items-center bg-dark dark:bg-accent rounded-lg p-1 h-16"
       >
         <form className="w-full" onSubmit={handleSubmit}>
           <div className="flex items-center w-full rounded-lg text-lg sm:text-2xl">
@@ -88,7 +88,7 @@ const Messagebar = () => {
           delay: 0.8,
           duration: 0.5,
         }}
-        className="flex justify-center flex-row items-center gap-1 rounded-lg h-16 bg-accent p-2 transition duration-300 overflow-hidden"
+        className="border-1 border-accent flex justify-center flex-row items-center gap-1 rounded-lg h-16 bg-dark dark:bg-accent p-2 transition duration-300 overflow-hidden"
       >
         <motion.div
           className="flex"
@@ -134,7 +134,7 @@ const Messagebar = () => {
           whileHover={{ rotate: 360 }}
           transition={{ duration: 0.1, ease: "easeInOut" }}
           onClick={() => setShowIcons((prev) => !prev)}
-          className="flex justify-center items-center font-bold w-10 h-10 text-xl font-sans rounded-lg bg-hubspot hover:scale-110 hover:duration-300"
+          className="flex justify-center items-center font-bold w-10 h-10 text-xl font-sans text-background dark:text-foreground  rounded-lg bg-hubspot hover:scale-110 hover:duration-300"
         >
           {/* <FaHashtag /> */}
 
