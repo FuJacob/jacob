@@ -132,7 +132,7 @@ const Head = () => {
           delay: 1.5,
           duration: 1,
         }}
-        className="mt-3 w-full bg-secondary h-0.5 rounded-full shadow-3xl"
+        className="mt-3 w-full bg-accent h-0.5 rounded-full shadow-3xl "
       />
       {/* <div className="flex flex-col">
         <h1 className="text-5xl font-semibold mb-2"></h1>

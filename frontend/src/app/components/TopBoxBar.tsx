@@ -9,7 +9,7 @@ const TopBoxBar = () => {
     year: "numeric",
   });
   return (
-    <div className="flex justify-center items-center text-secondary font-sans text-xs sm:text-sm font-bold sm:rounded-t-3xl w-full p-4 bg-dark shadow-2xl gap-4 ">
+    <div className="flex justify-center items-center font-sans text-xs sm:text-sm font-bold sm:rounded-t-3xl w-full p-4 bg-accent shadow-2xl gap-4 ">
       <div className="sm:flex hidden justify-center items-center gap-1">
         {" "}
         <FaRocket /> Software Engineer

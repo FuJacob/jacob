@@ -71,16 +71,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${noto_sans.variable} ${neuton.variable} antialiased max-w-screen-sm mx-auto h-[90vh] sm:h-screen flex justify-center items-center`}
-        style={{
-          background: "url('bg.svg')",
-          backgroundSize: "cover",
-        }}
+        className={`${noto_sans.variable} ${neuton.variable} antialiased  max-w-screen-sm mx-auto h-[90vh]  sm:h-screen flex justify-center items-center`}
       >
         {children}
+        <GoogleAnalytics gaId="G-Q3L1FNZM20" />
+        <Analytics />
       </body>
-      <GoogleAnalytics gaId="G-Q3L1FNZM20" />
-      <Analytics />
     </html>
   );
 }
