@@ -12,7 +12,7 @@ Instead of reading about me, recruiters can chat with an AI version of me.
 
 ### 💡 Features
 
-- ChatGPT-style interface with iMessage-inspired design  
+- ChatGPT-style interface  
 - AI responds with info about my background, projects, and interests  
 - Fully responsive and fast  
 
