@@ -1,20 +1,22 @@
-# Jacob Fu
+# Jacob Fu – ChatGPT-Style Portfolio
 
-💔 ChatGPT wrapper here. ChatGPT wrapper there.  
-At this point, just make your personal website a ChatGPT wrapper.
+A personal portfolio site built as a ChatGPT-style wrapper.  
+Instead of reading about me, recruiters can chat with an AI version of me.
 
-So I did. Threw in my resume and a few quirks into the system prompt — and boom, it’s me.
+### 🛠 Tech Stack
 
-Now recruiters don’t just read about Jacob.  
-They **talk** to Jacob.
+- **Next.js** – React framework with SSR and API support  
+- **React** – Component-based frontend  
+- **Tailwind CSS** – Utility-first styling  
+- **Gemini API + SDK** – Powers the chat responses
 
-Ask me stuff like:
+### 💡 Features
 
-- “What kind of stuff have you worked on?” 🚀  
-- “What’s your favourite colour?” 😁  
-- “How cracked are you at Valorant?” 🤤  
-- “Do you touch grass?” 🙈  
-- “How many hours of TikTok do you watch a day?” 💀  
+- ChatGPT-style interface with iMessage-inspired design  
+- AI responds with info about my background, projects, and interests  
+- Fully responsive and fast  
 
-**Come say hi:** [jacobfu.com](https://jacobfu.com)  
-**GitHub:** [github.com/fujacob/jacob](https://github.com/fujacob/jacob)
+### 🔗 Links
+
+**Live Site:** [jacobfu.com](https://jacobfu.com)  
+**Source Code:** [github.com/fujacob/jacob](https://github.com/fujacob/jacob)
